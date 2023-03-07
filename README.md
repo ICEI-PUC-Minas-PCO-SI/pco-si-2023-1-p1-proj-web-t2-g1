@@ -7,7 +7,7 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Uma aplicação que tem como foco, auxiliar alunos da PUC no deslocamento para ir ou voltar da faculdade. De forma resumida, a aplicação deve criar uma conexão entre dois ou mais alunos que irão para locais semelhantes, um deles sendo o motorista que vai ceder lugar em seu veículo.
 
 ## Integrantes
 
