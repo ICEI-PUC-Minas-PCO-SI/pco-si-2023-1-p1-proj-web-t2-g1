@@ -20,9 +20,9 @@ Essa aplicação foi escolhida devido a dificuldades observadas pelos membros do
 
 ## Público-Alvo
 
-A aplicação PUCarona busca auxiliar pessoas que possuem vínculo a instituição PUC Minas, sendo elas estudantes e funcionários, esse grupo pode ser divido em dois, sendo eles: <br>
-Pessoas com dificuldades na logistica do deslocamento: Esse grupo se encontra numa situação onde essa dificuldade de acesso pode ser três fatores: <br>
-1. Falta de transporte público <br>
-2. Alto valores de motorista de aplicativos  <br>
-3. Distância de locomoção  <br>
+A aplicação PUCarona busca auxiliar pessoas que possuem vínculo a instituição PUC Minas, sendo elas estudantes e funcionários, esse grupo pode ser divido em dois, sendo eles:  
+Pessoas com dificuldades na logistica do deslocamento: Esse grupo se encontra numa situação onde essa dificuldade de acesso pode ser três fatores:  
+1. Falta de transporte público 
+2. Alto valores de motorista de aplicativos  
+3. Distância de locomoção    
 Pessoas com facilidade: Esse grupo tem uma situação favorável a eles podendo eles terem um menor tempo de locomoção, por causa do fácil acesso as regiões que moram, ou por causa de possuírem veiculo próprio.
