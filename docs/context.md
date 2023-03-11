@@ -23,7 +23,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 ## Público-Alvo
 
 A aplicação PUCarona busca auxiliar pessoas que possuem vinculo a instituição PUC Minas, sendo elas estudantes e funcionários, esse grupo pode ser divido em dois, sendo eles:
-Pessoas com dificuldades: Esse grupo se encontra numa situação onde pode ser 3 fator; <br>
+Pessoas com dificuldades: Esse grupo se encontra numa situação onde essa dificuldade de acesso pode ser três  fatores; <br>
 -Falta de transporte publico <br>
 -Alto valores de motorista de aplicativos  <br>
 -Distancia de locomoção  <br>
