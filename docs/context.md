@@ -1,27 +1,17 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O projeto PUCarona almeja proporcionar maior mobilidade e facilitar a logística no traslado de ida e volta entre o campus da PUC e a casa de alunos e funcionários. Inicialmente tendo como foco principal conectar os usuários que buscam e os que oferecem carona através da identificação de CEP´s próximos. Visando sanar prioritariamente o problema da PUC Contagem, uma vez que, grande parte dos alunos, principalmente no turno da noite, fazem reclamações quanto à dificuldade de locomoção por meio do transporte público e aplicativos de viagens.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Foi observado uma dificuldade de alunos e colaboradores da Puc Minas em se locomover ao Campus de Contagem, pelo fato da unidade se localizar em uma área industrial e ser de pouco acesso por meio de opções de transporte público. Esta barreira, impede que alunos de bairros distantes da região ou até de outras cidades da Grande BH frequentem a Puc Contagem.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Desse modo, o projeto PUCarona deseja contribuir para que este problema de mobilidade possa ser reduzido através da criação de elos entre alunos, funcionários ou professores da Puc Minas afim de compartilhar a disponibilidade de caronas em carros particulares ou corridas compartilhadas por meio de aplicativos de viagens como Uber, 99Pop e InDrive.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Auxiliar alunos e funcionários na logística até ao campus. Viabilizando a conexão e o compartilhamento de caronas entre pessoas com endereços próximos e redução dos custos com a locomoção. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
@@ -34,13 +24,10 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+A aplicação PUCarona busca auxiliar pessoas que possuem vinculo a instituição PUC Minas, sendo elas estudantes e funcionários, esse grupo pode ser divido em dois, sendo eles:
+Pessoas com dificuldades: Esse grupo se encontra numa situação onde pode ser 3 fator;
+-Falta de transporte publico
+-Alto valores de motorista de aplicativos
+-Distancia de locomoção
+Pessoas com facilidade: Esse grupo tem uma situação favorável a eles podendo eles terem um menor tempo de locomoção, por causa do fácil acesso as regiões que moram, ou por causa de possuírem veiculo próprio.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
