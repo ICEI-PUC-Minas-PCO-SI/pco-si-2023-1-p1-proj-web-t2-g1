@@ -15,9 +15,7 @@ Auxiliar alunos e funcionários na logística até ao campus. Viabilizando a con
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Essa aplicação foi escolhida devido a dificuldades observadas pelos membros do grupo em relação à locomoção das pessoas que frequentam a faculdade. Vemos diariamente alunos da PUC questionando o valor a ser pago no seu deslocamento, a demora dos transportes públicos e o aumento da gasolina. Sendo assim, ela visa auxiliar os alunos e funcionários, tanto para ir ao campus, quanto para voltar para casa, por meio de caronas compartilhadas ou divisão do valor de Uber. 
 
 
 ## Público-Alvo
