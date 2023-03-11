@@ -25,4 +25,5 @@ Pessoas com dificuldades na logistica do deslocamento: Esse grupo se encontra nu
 1. Falta de transporte público 
 2. Alto valores de motorista de aplicativos  
 3. Distância de locomoção    
+
 Pessoas com facilidade: Esse grupo tem uma situação favorável a eles podendo eles terem um menor tempo de locomoção, por causa do fácil acesso as regiões que moram, ou por causa de possuírem veiculo próprio.
