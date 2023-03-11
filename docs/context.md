@@ -15,7 +15,7 @@ Auxiliar alunos e funcionários na logística até ao campus. Viabilizando a con
 
 ## Justificativa
 
-Essa aplicação foi escolhida devido a dificuldades observadas pelos membros do grupo em relação à locomoção das pessoas que frequentam a faculdade. Vemos diariamente alunos da PUC questionando o valor a ser pago no seu deslocamento, a demora dos transportes públicos e o aumento da gasolina. Sendo assim, ela visa auxiliar os alunos e funcionários, tanto para ir ao campus, quanto para voltar para casa, por meio de caronas compartilhadas ou divisão do valor de Uber. 
+Essa aplicação foi escolhida devido a dificuldades observadas pelos membros do grupo em relação à locomoção das pessoas que frequentam a faculdade. Vemos diariamente alunos da PUC questionando o valor a ser pago no seu deslocamento, a demora dos transportes públicos e o aumento da gasolina. Sendo assim, ela visa auxiliar os alunos e funcionários, tanto para ir ao campus, quanto para voltar para casa, por meio de caronas compartilhadas ou divisão do valor de viajens de aplicativos.
 
 
 ## Público-Alvo
