@@ -24,8 +24,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 A aplicação PUCarona busca auxiliar pessoas que possuem vinculo a instituição PUC Minas, sendo elas estudantes e funcionários, esse grupo pode ser divido em dois, sendo eles:
 Pessoas com dificuldades: Esse grupo se encontra numa situação onde pode ser 3 fator; <br>
--Falta de transporte publico
--Alto valores de motorista de aplicativos
--Distancia de locomoção
+-Falta de transporte publico <br>
+-Alto valores de motorista de aplicativos  <br>
+-Distancia de locomoção  <br>
 Pessoas com facilidade: Esse grupo tem uma situação favorável a eles podendo eles terem um menor tempo de locomoção, por causa do fácil acesso as regiões que moram, ou por causa de possuírem veiculo próprio.
-
