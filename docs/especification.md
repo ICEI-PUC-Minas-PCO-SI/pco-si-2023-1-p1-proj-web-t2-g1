@@ -6,6 +6,8 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
+Rodrigo Benitez tem 17 anos, acabou de ingressar no curso de Administração na PUC Minas Contagem, por ser do turno da noite, enfrenta dificuldades para se locomover ao campus, visto que reside no centro de Belo Horizonte necessita pegar ônibus, perdendo aproximadamente 1h30 do seu dia indo para a faculdade, e no trajeto de volta ficando dependente de vans e motoristas particulares, com custos elevados. Rodrigo está buscando um app que possibilite a conexão com outros alunos e funcionários que residem em regiões próximas e possuam carro ou estejam dispostos a dividir o valor da corrida por app de motorista particular. 
+
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
