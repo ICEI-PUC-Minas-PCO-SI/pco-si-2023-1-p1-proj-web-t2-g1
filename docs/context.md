@@ -1,6 +1,7 @@
 # Introdução
 
-O projeto PUCarona almeja proporcionar maior mobilidade e facilitar a logística no traslado de ida e volta entre o campus da PUC e a casa de alunos e funcionários. Inicialmente tendo como foco principal conectar os usuários que buscam e os que oferecem carona através da identificação de CEP´s próximos. Visando sanar prioritariamente o problema da PUC Contagem, uma vez que, grande parte dos alunos, principalmente no turno da noite, fazem reclamações quanto à dificuldade de locomoção por meio do transporte público e aplicativos de viagens.
+A aplicação PUCarona traz como foco principal conectar os usuários que buscam e os que oferecem carona através da identificação de CEP´s próximos. Visando sanar prioritariamente o problema da PUC Contagem, uma vez que, grande parte dos alunos, principalmente no turno da noite, fazem reclamações quanto à dificuldade de locomoção por meio do transporte público e aplicativos de viagens. Em pleno funcionamento, o projeto será capaz de proporcionar maior mobilidade e facilitar a logística no traslado de ida e volta entre o campus da PUC e a casa de alunos e funcionários.
+
 
 ## Problema
 Foi observado uma dificuldade de alunos e colaboradores da Puc Minas em se locomover ao Campus de Contagem, pelo fato da unidade se localizar em uma área industrial e ser de pouco acesso por meio de opções de transporte público. Esta barreira, impede que alunos de bairros distantes da região ou até de outras cidades da Grande BH frequentem a Puc Contagem.
