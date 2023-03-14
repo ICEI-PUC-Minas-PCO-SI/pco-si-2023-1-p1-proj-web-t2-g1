@@ -14,7 +14,7 @@ Uma aplicação que tem como foco, auxiliar alunos da PUC no deslocamento para i
 * Derick Lucas Alves Rodrigues
 * Bárbara Xavier Soares de Barros
 * Ana Flavia de Oliveira Costa
-* Pedro Henrique Silva Meida
+* 
 * Vinicius Celio Fontes Ribeiro
 * Arthur Parreiras Lage Martins
 
