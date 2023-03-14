@@ -11,7 +11,7 @@ Desse modo, o projeto PUCarona deseja contribuir para que este problema de mobil
 
 ## Objetivos
 
-Auxiliar alunos e funcionários na logística até ao campus. Viabilizando a conexão e o compartilhamento de caronas entre pessoas com endereços próximos e redução dos custos com a locomoção. 
+Auxiliar alunos e funcionários na logística até o campus. Viabilizando a conexão e o compartilhamento de caronas entre pessoas com endereços próximos e redução dos custos com a locomoção. 
 
 
 ## Justificativa
