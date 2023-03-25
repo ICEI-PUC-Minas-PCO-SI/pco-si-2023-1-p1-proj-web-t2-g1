@@ -39,16 +39,27 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA |  |
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA | |
+|RF-000| Cadastramento de usuario | ALTA |  |
+|RF-000| Cadastramento de Perfil   | ALTA | |
+|RF-000| LOGIN | ALTA |  |
+|RF-000| Recuperação de Senha   | ALTA | |
+|RF-000| Agendar uma carona | ALTA |  |
+|RF-000| Efetuar a reserva da carona   | ALTA | |
+|RF-000| Avaliação de Corrida | MÉDIA |  |
+|RF-000| Histórico de corridas   | BAIXA | |
+|RF-000| Localização via CEP | BAIXA |  |
+|RF-000| Pagamento pela a aplicação   | BAIXA | |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-000| Autenticação de email | ALTA | 
+|RNF-000| Responsividade |  MÉDIA  | 
+|RNF-000| Velocidade de Processamento Rápida | BAIXA  | 
+|RNF-000| Manter os dados salvos e protegidos |  MÉDIA  | 
+|RNF-000| Suporte a dispositivos iOS e Android |  ALTA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
