@@ -13,19 +13,6 @@ Rodrigo Benitez tem 17 anos, acabou de ingressar no curso de Administração na 
 **Persona 3:** Charles Oliveira é um aluno do 4º período do curso de Ciências da Computação na Puc Minas do Coração Eucarístico, atualmente Alex está matriculado no turno da manhã. Com o mercado de tecnologia aquecido, ele tem tentado se candidatar para vagas de estágio na área, porém tem recebido diversas respostas negativas por estudar no turno da manhã. Alex deseja se transferir para o curso de Sistemas de Informação na Puc Minas de Contagem no turno da noite, porém para concluir esta mudança, ele gostaria de se conectar com pessoas que morassem na mesma região que ele e estivessem dispostas a dividir os custos de uma corrida de Uber/99pop ou que ofertassem caronas para sua região.
 
 
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
-
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
