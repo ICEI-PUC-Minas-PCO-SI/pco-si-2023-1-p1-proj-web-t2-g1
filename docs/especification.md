@@ -5,10 +5,13 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
-Persona 1:
+**Persona 1:**
 Rodrigo Benitez tem 17 anos, acabou de ingressar no curso de Administração na PUC Minas Contagem, por ser do turno da noite, enfrenta dificuldades para se locomover ao campus, visto que reside no centro de Belo Horizonte necessita pegar ônibus, perdendo aproximadamente 1h30 do seu dia indo para a faculdade, e no trajeto de volta ficando dependente de vans e motoristas particulares, com custos elevados. Rodrigo está buscando um app que possibilite a conexão com outros alunos e funcionários que residem em regiões próximas e possuam carro ou estejam dispostos a dividir o valor da corrida por app de motorista particular. 
 
-Persona 2: Bianca Nazário tem 42 anos e é professora de Filosofia da Puc Minas Contagem. Ela mora em um apartamento sozinha no bairro Nova Suíssa em Belo Horizonte e se desloca para o Campus quatro vezes por semana em seu Renault Kwid sem nenhuma companhia no carro. Bianca muito consciente dos desafios que os estudantes enfrentam como as limitações de horários de transporte público e valores elevados de vans escolares gostaria de encontrar algum lugar que ela pudesse se conectar com os alunos da PUC Minas e ofertar caronas para aqueles que moram próximo a sua região ou que façam um trajeto parecido com o dela. 
+**Persona 2:** Bianca Nazário tem 42 anos e é professora de Filosofia da Puc Minas Contagem. Ela mora em um apartamento sozinha no bairro Nova Suíssa em Belo Horizonte e se desloca para o Campus quatro vezes por semana em seu Renault Kwid sem nenhuma companhia no carro. Bianca muito consciente dos desafios que os estudantes enfrentam como as limitações de horários de transporte público e valores elevados de vans escolares gostaria de encontrar algum lugar que ela pudesse se conectar com os alunos da PUC Minas e ofertar caronas para aqueles que moram próximo a sua região ou que façam um trajeto parecido com o dela. 
+
+**Persona 3:** Charles Oliveira é um aluno do 4º período do curso de Ciências da Computação na Puc Minas do Coração Eucarístico, atualmente Alex está matriculado no turno da manhã. Com o mercado de tecnologia aquecido, ele tem tentado se candidatar para vagas de estágio na área, porém tem recebido diversas respostas negativas por estudar no turno da manhã. Alex deseja se transferir para o curso de Sistemas de Informação na Puc Minas de Contagem no turno da noite, porém para concluir esta mudança, ele gostaria de se conectar com pessoas que morassem na mesma região que ele e estivessem dispostas a dividir os custos de uma corrida de Uber/99pop ou que ofertassem caronas para sua região.
+
 
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
