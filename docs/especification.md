@@ -17,10 +17,22 @@ Rodrigo Benitez tem 17 anos, acabou de ingressar no curso de Administração na 
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                                       |
+|--------------------|----------------------------------------------------|--------------------------------------------------------------|
+|Usuário do sistema  |Realizar cadastro                                   |Acessar aplicação, realizar reserva de carona                 |
+|Usuário do sistema  |Acessar avaliação do usuário                        |Verificar confiabilidade e localização                        |
+|Administrador       |Acesso ao sistema                                   |Relatório de pessoas cadastradas, acessar histórico de viagens|
+|Usuário do sistema  |Acessar em tempo real disponibilidade de usuários   |Reserva de Carona                                             |
+|Administrador       |Pagamento pela a aplicação                          |O sistema deve facilitar o pagamento através de redirecionamento para as plataformas, Integração com sistema do Banco para envio de informações de transferência internacional de valores|
+|Administrador       |Localização via CEP                                 |O sistema deve facilitar localizar os usuários através do CEP inserido no cadastramento.|
+|Administrador       |Avaliação de Corrida                                |O sistema deve proporcionar um método de avaliação para quem oferece/ recebe carona |
+|Administrador       |Recuperação de Senha                                |O sistema deve fornecer um método de recuperação de senha através do número de celular ou email cadastrado para os usuários|
+|Usuário do sistema  |Recuperação de Senha                                |Fornecer os dados requeridos pelo sistema                     |
+|Administrador       |Suporte a dispositivos iOS e Android                |O sistema deve fornecer integração e suporte para dispositivos IOS  e ANDROID   |
+|Administrador       |Manter os dados salvos e protegidos                 |O sistema deve fornecer privacidade e acesso ao histórico de corridas nos dispositivos |
+|Administrador       |Velocidade de Processamento Rápida                  |O sistemas deve processar requisições do usuário em no máximo 5s  |
+|Administrador       |Responsividade                                      | Uso de Design responsivo e interativo nas interfaces gráficas  |
+
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
