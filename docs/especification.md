@@ -1,8 +1,9 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+O projeto PUCarona surgiu através da identificação de um problema comum na rotina dos universitários da PUC Minas de Contagem, que é a dificuldade de acesso ao campus, isto acontece por diversos motivos, entre eles, o fato da unidade estar localizada em uma área industrial e ter poucas opções de transporte público. Considerando isso, nasceu a ideia desta aplicação que tem como objetivo tornar mais acessível o ingresso e regresso de alunos e funcionários da universidade. O objetivo fundamental deste projeto é conectar pessoas que façam o mesmo trajeto de ida e volta, seja por meio de carona ofertada por um usuário do PUCarona que possui veículo próprio ou divisão dos custos em uma corrida por meio de aplicativos de viagem. 
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Neste documento foram construídas as personas do projeto, com o objetivo de explicitar e tornar claro as principais características dos futuros usuários. Com o objetivo de deixar mais preciso, foi feita também a construção das histórias de usuários a partir do entendimento das necessidades e motivações deles. Relativo à construção da aplicação, neste documento é apresentado também os requisitos funcionais e não funcionais do sistema, estes requisitos foram definidos a partir de deduções feitas sobre quais seriam as necessidades dos usuários ao utilizar o PUCarona. Por fim, o grupo definiu as restrições relativas ao projeto, sendo elas fundamentais para a visualização do que será entregue como resultado final do trabalho. 
+
 
 ## Personas
 **Persona 1:**
