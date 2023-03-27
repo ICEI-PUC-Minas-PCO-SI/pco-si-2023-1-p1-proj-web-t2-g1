@@ -11,7 +11,9 @@ Rodrigo Benitez tem 17 anos, acabou de ingressar no curso de Administração na 
 
 **Persona 2:** Bianca Nazário tem 42 anos e é professora de Filosofia da Puc Minas Contagem. Ela mora em um apartamento sozinha no bairro Nova Suíssa em Belo Horizonte e se desloca para o Campus quatro vezes por semana em seu Renault Kwid sem nenhuma companhia no carro. Bianca muito consciente dos desafios que os estudantes enfrentam como as limitações de horários de transporte público e valores elevados de vans escolares gostaria de encontrar algum lugar que ela pudesse se conectar com os alunos da PUC Minas e ofertar caronas para aqueles que moram próximo a sua região ou que façam um trajeto parecido com o dela. 
 
-**Persona 3:** Charles Oliveira é um aluno do 4º período do curso de Ciências da Computação na Puc Minas do Coração Eucarístico, atualmente Alex está matriculado no turno da manhã. Com o mercado de tecnologia aquecido, ele tem tentado se candidatar para vagas de estágio na área, porém tem recebido diversas respostas negativas por estudar no turno da manhã. Alex deseja se transferir para o curso de Sistemas de Informação na Puc Minas de Contagem no turno da noite, porém para concluir esta mudança, ele gostaria de se conectar com pessoas que morassem na mesma região que ele e estivessem dispostas a dividir os custos de uma corrida de Uber/99pop ou que ofertassem caronas para sua região.
+**Persona 3:** Charles Oliveira é um aluno do 4º período do curso de Ciências da Computação na Puc Minas do Coração Eucarístico, atualmente ele está matriculado no turno da manhã. Com o mercado de tecnologia aquecido, ele tem tentado se candidatar para vagas de estágio na área, porém tem recebido diversas respostas negativas por estudar no turno da manhã. Charles deseja se transferir para o curso de Sistemas de Informação na Puc Minas de Contagem no turno da noite, porém para concluir esta mudança, ele gostaria de se conectar com pessoas que morassem na mesma região que ele e estivessem dispostas a dividir os custos de uma corrida de Uber/99pop ou que ofertassem caronas para sua região.
+
+**Persona 4:** Matheus Meireles tem 22 anos, e está estudando no 7º período de Direito e enfrenta dificuldade de estar se locomovendo até o campus, pois ele ia de carona com a sua vizinha que também estudava na mesma universidade e auxiliava ela com o valor do combustível, mas ela se formou e agora ele está à procura de novas pessoas para estar compartilhando com ele um meio de locomoção para a universidade.
 
 
 ## Histórias de Usuários
@@ -42,29 +44,28 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-000| Cadastramento de usuario | ALTA |  |
-|RF-000| Cadastramento de Perfil   | ALTA | |
-|RF-000| LOGIN | ALTA |  |
-|RF-000| Recuperação de Senha   | ALTA | |
-|RF-000| Agendar uma carona | ALTA |  |
-|RF-000| Efetuar a reserva da carona   | ALTA | |
-|RF-000| Avaliação de Corrida | MÉDIA |  |
-|RF-000| Histórico de corridas   | BAIXA | |
-|RF-000| Localização via CEP | BAIXA |  |
-|RF-000| Pagamento pela a aplicação   | BAIXA | |
+|RF-001| Cadastramento de usuario | ALTA |  |
+|RF-002| Cadastramento de Perfil   | ALTA | |
+|RF-003| LOGIN | ALTA |  |
+|RF-004| Recuperação de Senha   | ALTA | |
+|RF-005| Agendar uma carona | ALTA |  |
+|RF-006| Efetuar a reserva da carona   | ALTA | |
+|RF-007| Avaliação de Corrida | MÉDIA |  |
+|RF-008| Histórico de corridas   | BAIXA | |
+|RF-009| Localização via CEP | BAIXA |  |
+|RF-010| Pagamento pela a aplicação   | BAIXA | |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-000| Autenticação de email | ALTA | 
-|RNF-000| Responsividade |  MÉDIA  | 
-|RNF-000| Velocidade de Processamento Rápida | BAIXA  | 
-|RNF-000| Manter os dados salvos e protegidos |  MÉDIA  | 
-|RNF-000| Suporte a dispositivos iOS e Android |  ALTA | 
+|RNF-001| Autenticação de email | ALTA | 
+|RNF-002| Responsividade |  MÉDIA  | 
+|RNF-003| Velocidade de Processamento Rápida | BAIXA  | 
+|RNF-004| Manter os dados salvos e protegidos |  MÉDIA  | 
+|RNF-005| Suporte a dispositivos iOS e Android |  ALTA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
 
 ## Restrições
