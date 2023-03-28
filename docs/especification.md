@@ -44,16 +44,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Cadastramento de usuario | ALTA |  |
-|RF-002| Cadastramento de Perfil   | ALTA | |
-|RF-003| LOGIN | ALTA |  |
-|RF-004| Recuperação de Senha   | ALTA | |
-|RF-005| Agendar uma carona | ALTA |  |
-|RF-006| Efetuar a reserva da carona   | ALTA | |
-|RF-007| Avaliação de Corrida | MÉDIA |  |
-|RF-008| Histórico de corridas   | BAIXA | |
-|RF-009| Localização via CEP | BAIXA |  |
-|RF-010| Pagamento pela a aplicação   | BAIXA | |
+|RF-001| Cadastramento de usuario | ALTA | Barbara |
+|RF-002| Cadastramento de Perfil   | ALTA | Matheus |
+|RF-003| LOGIN | ALTA | Barbara |
+|RF-004| Recuperação de Senha   | ALTA | Ana |
+|RF-005| Agendar uma carona | ALTA | Arthur |
+|RF-006| Efetuar a reserva da carona   | ALTA | Natalia |
+|RF-007| Avaliação de Corrida | MÉDIA | Natalia |
+|RF-008| Histórico de corridas   | BAIXA | Vinicius |
+|RF-009| Localização via CEP | BAIXA | Derick |
 
 
 ### Requisitos não Funcionais
