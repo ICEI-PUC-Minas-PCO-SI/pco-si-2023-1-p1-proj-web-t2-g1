@@ -44,8 +44,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Cadastramento de usuario | ALTA | Barbara |
-|RF-002| Cadastramento de Perfil   | ALTA | Matheus |
+|RF-001| A aplicação deve realizar o cadastramento de novos usuario | ALTA | Barbara |
+|RF-002| A aplicação deve possuir um metodo de cadastrar um perfil do usuario   | ALTA | Matheus |
 |RF-003| LOGIN | ALTA | Barbara |
 |RF-004| Recuperação de Senha   | ALTA | Ana |
 |RF-005| Agendar uma carona | ALTA | Arthur |
