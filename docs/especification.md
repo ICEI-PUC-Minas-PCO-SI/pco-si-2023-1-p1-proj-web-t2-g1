@@ -1,8 +1,8 @@
 # Especificações do Projeto
 
-O projeto PUCarona surgiu através da identificação de um problema comum na rotina dos universitários da PUC Minas de Contagem, que é a dificuldade de acesso ao campus, isto acontece por diversos motivos, entre eles, o fato da unidade estar localizada em uma área industrial e ter poucas opções de transporte público. Considerando isso, nasceu a ideia desta aplicação que tem como objetivo tornar mais acessível o ingresso e regresso de alunos e funcionários da universidade. O objetivo fundamental deste projeto é conectar pessoas que façam o mesmo trajeto de ida e volta, seja por meio de carona ofertada por um usuário do PUCarona que possui veículo próprio ou divisão dos custos em uma corrida por meio de aplicativos de viagem. 
-
 Neste documento foram construídas as personas do projeto, com o objetivo de explicitar e tornar claro as principais características dos futuros usuários. Com o objetivo de deixar mais preciso, foi feita também a construção das histórias de usuários a partir do entendimento das necessidades e motivações deles. Relativo à construção da aplicação, neste documento é apresentado também os requisitos funcionais e não funcionais do sistema, estes requisitos foram definidos a partir de deduções feitas sobre quais seriam as necessidades dos usuários ao utilizar o PUCarona. Por fim, o grupo definiu as restrições relativas ao projeto, sendo elas fundamentais para a visualização do que será entregue como resultado final do trabalho. 
+
+É importante destacar que a aplicação será desenvolvida apenas com tecnologias de front-end, sendo elas HTML, CSS, JavaScript e micro frameworks como Bootstrap e jQuery. Neste caso, para a persistência dos dados, não será utilizado nenhum banco de dados e todo o processo de CRUD será feito por meio de APIs como JSON Server e localStorage. 
 
 
 ## Personas
