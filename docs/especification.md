@@ -46,24 +46,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----| ----|
 |RF-001| A aplicação deve realizar o cadastramento de novos usuario | ALTA | Barbara |
 |RF-002| A aplicação deve possuir um metodo de cadastrar um perfil do usuario   | ALTA | Matheus |
-|RF-003| LOGIN | ALTA | Barbara |
-|RF-004| Recuperação de Senha   | ALTA | Ana |
-|RF-005| Agendar uma carona | ALTA | Arthur |
-|RF-006| Efetuar a reserva da carona   | ALTA | Natalia |
-|RF-007| Avaliação de Corrida | MÉDIA | Natalia |
-|RF-008| Histórico de corridas   | BAIXA | Vinicius |
-|RF-009| Localização via CEP | BAIXA | Derick |
+|RF-003| A aplicação deve permitir efetuar o LOGIN | ALTA | Barbara |
+|RF-004| A aplicação deve possibilitar a recuperação de Senha   | ALTA | Ana |
+|RF-005| A aplicação deve agendar uma carona | ALTA | Arthur |
+|RF-006| A aplicação deve efetuar a reserva da carona   | ALTA | Natalia |
+|RF-007| A aplicação deve permitir a avaliação de Corrida | MÉDIA | Natalia |
+|RF-008| A aplicação deve possibilitar visualizar o histórico de corridas   | BAIXA | Vinicius |
+|RF-009| A aplicação deve possibilitar acessar a localização via CEP | BAIXA | Derick |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| Autenticação de email | ALTA | 
-|RNF-002| Responsividade |  MÉDIA  | 
-|RNF-003| Velocidade de Processamento Rápida | BAIXA  | 
-|RNF-004| Manter os dados salvos e protegidos |  MÉDIA  | 
-|RNF-005| Suporte a dispositivos iOS e Android |  ALTA | 
+|RNF-001| A aplicação deve realizar a autenticação de email | ALTA | 
+|RNF-002| A aplicação deve ter responsividade |  MÉDIA  | 
+|RNF-003| A aplicação deve ter uma velocidade de Processamento Rápida | BAIXA  | 
+|RNF-004| A aplicação deve manter os dados salvos e protegidos |  MÉDIA  | 
+|RNF-005| A aplicação deve possuir suporte a dispositivos iOS e Android |  ALTA | 
 
 
 
