@@ -36,6 +36,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Administrador       |Velocidade de Processamento Rápida                  |O sistemas deve processar requisições do usuário em no máximo 5s  |
 |Administrador       |Responsividade                                      | Uso de Design responsivo e interativo nas interfaces gráficas  |
 
+<img src=".\pco-si-2023-1-p1-proj-web-t2-g1\docs\img\Diagrama.jpg">
+
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
