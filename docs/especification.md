@@ -36,8 +36,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Administrador       |Velocidade de Processamento Rápida                  |O sistemas deve processar requisições do usuário em no máximo 5s  |
 |Administrador       |Responsividade                                      | Uso de Design responsivo e interativo nas interfaces gráficas  |
 
-![Diagram de caso de uso](pco-si-2023-1-p1-proj-web-t2-g1/docs/img/Diagrama.png)
-<img src=".pco-si-2023-1-p1-proj-web-t2-g1/docs/img/Diagrama.png">
+![Diagrama](https://user-images.githubusercontent.com/124528221/229374062-a73151ff-9c1a-4877-8e2a-6bc4bc60c5b6.png)
 
 
 ## Requisitos
