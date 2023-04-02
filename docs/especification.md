@@ -37,6 +37,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Administrador       |Responsividade                                      | Uso de Design responsivo e interativo nas interfaces gráficas  |
 
 ![Diagram de caso de uso](pco-si-2023-1-p1-proj-web-t2-g1/docs/img/Diagrama.png)
+<img src=".pco-si-2023-1-p1-proj-web-t2-g1/docs/img/Diagrama.png">
 
 
 ## Requisitos
