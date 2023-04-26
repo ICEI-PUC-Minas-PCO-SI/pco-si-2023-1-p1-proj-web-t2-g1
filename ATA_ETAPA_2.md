@@ -3,4 +3,4 @@ Como lider do grupo, dialogo com cada integrante e com base separou oque cada um
 
 
 # Natália
-Eu contribui para o grupo inicialmente criando o desing do flow utilizado e algumas das paginas do user flow pelo plataforma figma e posteriormente segui contribuindo com a criação do "menu" no template no vsCode 
+Eu contribui para o grupo inicialmente criando o desing do flow utilizado e algumas das paginas do user flow pelo plataforma figma e posteriormente segui contribuindo com a criação do "menu" no template. 
