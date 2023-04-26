@@ -11,3 +11,6 @@ Minha contribuição para a entrega da etapa 2 consistiu principalmente no desen
 
 # Ana Flavia
 Minha contribuição na etapa 2 caracterizou na montagem e desenvolvimento das telas do user flow, baseando no desing criado pela Natália, utilizando o figma, realizei a montagem do fluxograma.
+
+# Bárbara
+Criei a logo da aplicação, utilizando uma IA para criar a base da letra C e do veículo. Depois editei no aplicativo de arte 'IbisPaint', acrescentando uma rua, detalhes e cores. Para o letreiro, usei o aplicativo 'Canva' e mesclei com a imagem da logo. Ajudei na criação do Wireframe e auxiliei na finalização do fluxograma do Flow.
