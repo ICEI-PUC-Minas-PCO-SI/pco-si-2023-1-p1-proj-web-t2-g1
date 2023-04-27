@@ -14,4 +14,4 @@ Minha contribuição na etapa 2 caracterizou na montagem e desenvolvimento das t
 Criei a logo da aplicação, utilizando uma IA para criar a base da letra C e do veículo. Depois editei no aplicativo de arte 'IbisPaint', acrescentando uma rua, detalhes e cores. Para o letreiro, usei o aplicativo 'Canva' e mesclei com a imagem da logo. Ajudei na criação do Wireframe e auxiliei na finalização do fluxograma do Flow.
 
 # Vinícius
-Atuei diretamente no desenvolvimento do template padrão, criando a estrutura base do HTML e do CSS. Priorizei nessa etapa manter um HTML semântico e um CSS que garantisse a responsividade total da aplicação, para isso fiz uso de media queries e flex-box. Além disto, auxiliei outros membros do projeto com dúvidas relacionados ao sistema de controle de versões GIT.  
+Atuei diretamente no desenvolvimento do template padrão, criando a estrutura base do HTML e do CSS. Priorizei nessa etapa manter um HTML semântico e um CSS que garantisse a responsividade total da aplicação, para isso fiz uso de media queries e flex-box. Além disto, auxiliei outros membros do projeto com dúvidas e problemas relacionados ao sistema de controle de versões GIT.  
