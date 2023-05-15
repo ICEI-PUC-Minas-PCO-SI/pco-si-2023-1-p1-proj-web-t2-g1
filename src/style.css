@@ -77,6 +77,10 @@ header nav {
     padding-left: 20px;
 }
 
+main {
+    min-height: 80vh;
+}
+
 .titulo {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
@@ -86,7 +90,8 @@ header nav {
     margin: 0;   
 }
 
-.historico {
+/*Histórico de corridas*/
+.my-Container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -95,7 +100,7 @@ header nav {
     margin: 0 auto;
 }
 
-.box-historico {
+.my-Box {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -106,31 +111,26 @@ header nav {
     border-radius: 8px;
 }
 
-.box-historico > p {
+.my-Box > p {
     word-break: break-all;
     font-size: 23px;
 }
 
-.box-historico > p:nth-child(1) {
+.my-Box > .topo {
     font-size: 15px;
+    padding-bottom: 15px;
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
-.box-historico:nth-child(2n+1) > p:nth-child(1)::after {
+.passageiro:after {
     padding-left: 5px;
     content: url('images/passageiro.png');
 }
 
-.box-historico:nth-child(2n+2) > p:nth-child(1)::after {
+.motorista::after {
     padding-left: 5px;
     content: url('images/motorista.png');
-}
-
-.box-historico > p:nth-child(2) {
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
 }
 
 .botao {
@@ -146,6 +146,54 @@ header nav {
 .botao:hover {
     background-color: var(--azul-medio);
     color: black;
+}
+
+/*Histórico de corridas*/
+
+.aceitar {
+    padding: 8px;
+    font-size: 13px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    margin: auto;
+    border-radius: 33px;
+}
+
+.aceitar:hover {
+    background-color: rgb(1, 82, 1);
+}
+
+.negar {
+    padding: 8px;
+    font-size: 13px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: auto;
+    border-radius: 33px;
+}
+
+.negar:hover {
+    background-color: rgb(223, 0, 0);
+}
+
+.local-partida {
+    min-width: 300px;
+}
+
+.local-destino {
+    min-width: 300px;
+}
+
+.local-partida::before {
+    content: url(images/partida.png);
+    padding-right: 5px;
+}
+
+.local-destino::before {
+    content: url(images/chegada.png);
+    padding-right: 5px;
 }
 
 footer {
