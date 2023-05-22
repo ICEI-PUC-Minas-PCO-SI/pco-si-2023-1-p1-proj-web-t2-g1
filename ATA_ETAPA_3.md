@@ -3,3 +3,6 @@ Fiz as páginas de 'Login', 'Editar perfil' e 'Cadastro de veículo' usando HTML
 
 # Arthur
 Fui responsável pela criação do código HTML e CSS das páginas Avaliar-Corrida e Excluir conta, baseando-me no userflow e templante padrão postados previamente. Recorri à ajuda do Derick para utilização do git hub e à estrutura de código da Natália.
+
+# Derick
+Fiz a pagina de criar a corrida, seguindo o wireframe e com o template, responsavel por organizar as tarefas do grupo e auxiliar
