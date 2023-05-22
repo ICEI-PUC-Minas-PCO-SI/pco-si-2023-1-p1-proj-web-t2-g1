@@ -15,9 +15,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-
 a {
     text-decoration: none;
     color: currentColor;
@@ -183,10 +180,12 @@ main {
 
 .local-partida {
     min-width: 300px;
+    color: rgb(94, 94, 94);
 }
 
 .local-destino {
     min-width: 300px;
+    color: rgb(94, 94, 94);
 }
 
 .local-partida::before {
@@ -198,6 +197,27 @@ main {
     content: url(images/chegada.png);
     padding-right: 5px;
 }
+
+.modal-body{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.campo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.campo > p {
+    color: rgb(94, 94, 94);
+    
+}
+
+.campo > h5 {
+    font-weight: bold;
+}
+
 
 footer {
     display: flex;
