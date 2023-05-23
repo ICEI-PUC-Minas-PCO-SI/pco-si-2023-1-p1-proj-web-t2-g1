@@ -6,3 +6,6 @@ Fui responsável pela criação do código HTML e CSS das páginas Avaliar-Corri
 
 # Derick
 Fiz a pagina de criar a corrida, seguindo o wireframe e com o template, responsavel por organizar as tarefas do grupo e auxiliar
+
+# Ana Flavia
+Fui responsável por criar as paginas de recuperacão de senha, utilizei HTML e Bootstrap. Fiz baseado no userflow e template padrão.
