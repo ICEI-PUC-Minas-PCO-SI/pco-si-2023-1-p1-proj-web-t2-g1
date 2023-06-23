@@ -32,7 +32,7 @@ function initLoginApp () {
     var usuariosJSON = localStorage.getItem('db_usuarios');
 
     // Verifica se existem dados já armazenados no localStorage
-    if (!usuariosJSON) {  // Se NÃO há dados no localStorage
+    if (!usuariosJSON) {  
         
         // Informa sobre localStorage vazio e e que serão carregados os dados iniciais
         alert('Dados de usuários não encontrados no localStorage. \n -----> Fazendo carga inicial.');
