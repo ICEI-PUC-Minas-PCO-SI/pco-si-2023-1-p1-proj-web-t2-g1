@@ -7,7 +7,8 @@
         "senha":"1234567",
         "telefone": "123456789",
         "carro": "",
-        "placa": " "
+        "placa": " ",
+        "avaliacao": ""
 
       },
       {
@@ -16,7 +17,8 @@
         "email":"",
         "telefone": "987654321",
         "carro": "",
-        "placa": " "
+        "placa": " ",
+        "avaliacao": ""
 
       },
       {
@@ -25,7 +27,8 @@
         "email":"",
         "telefone": "123456789",
         "carro": "",
-        "placa": " "
+        "placa": " ",
+        "avaliacao": ""
 
       }
     ],
