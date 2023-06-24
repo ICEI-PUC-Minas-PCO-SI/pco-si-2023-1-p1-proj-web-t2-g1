@@ -15,5 +15,10 @@
   ],
   "profile": {
     "name": "typicode"
+  },
+  "motorista":{
+    "id": "1",
+    "name": "Joao Pedro",
+    "media": []
   }
 }

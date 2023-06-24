@@ -1,67 +1,58 @@
-URL = 'http://localhost:3000/comments';
+const URL = 'http://localhost:3000/motorista';
 
-function buscarNomeUsuario(usuarios, userId) {
-    const usuario = usuarios.find(user => user.id === userId);
-    return usuario ? usuario.username : '';
-}
+document.getElementById('avaliacaoForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-// média
-function handleFormSubmit(event) {
-    event.preventDefault();
+  // Obtenha o valor selecionado no <select> das notas
+  var nota = document.getElementById('selectNota').value;
 
-    const selectNota = document.getElementById('selectNota');
-    const nota = selectNota.value;
+  // Obtenha o ID do usuário selecionado
+  var usuarioId = document.getElementById('selectUsuario').value;
 
-    const selectUsuario = document.getElementById('selectUsuario');
-    const userId = selectUsuario.value;
+  // Fazer a requisição HTTP para atualizar o JSON
+  fetch(URL)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var motorista = data.motorista;
 
-    // Dados api
-    fetch('db_usuarios.json')
-        .then(response => response.json())
-        .then(data => {
-            // Buscar o nome de usuário na resposta da API
-            const nomeUsuario = buscarNomeUsuario(data.usuarios, userId);
+      // Verificar se já existem notas e calcular a nova média
+      var notas = motorista.notas || [];
+      notas.push(Number(nota));
+      var media = calcularMedia(notas);
 
-            // Verificar se o usuário já possui uma avaliação
-            const usuarioAvaliacao = data.avaliacao.find(avaliacao => avaliacao.usuario === nomeUsuario);
+      // Atualizar o valor da média no objeto motorista
+      motorista.media = media;
 
-            if (usuarioAvaliacao) {
-                // Atualizar a média do usuário existente
-                usuarioAvaliacao.media = calcularMedia(nota, usuarioAvaliacao.media);
-            } else {
-                // Criar uma nova avaliação para o usuário
-                data.avaliacao.push({
-                    usuario: nomeUsuario,
-                    media: nota
-                });
-            }
-
-            // Enviar os dados atualizados para a API
-            fetch('db_usuarios.json', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => {
-                    if (response.ok) {
-                        console.log('Média de avaliações atualizada com sucesso!');
-                    } else {
-                        console.error('Erro ao atualizar a média de avaliações.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro ao enviar os dados atualizados:', error);
-                });
+      // Fazer a requisição PUT para atualizar o JSON no servidor
+      fetch(URL, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(function(response) {
+          if (response.ok) {
+            console.log('Média atualizada com sucesso.');
+          } else {
+            console.error('Ocorreu um erro ao atualizar a média.');
+          }
         })
-        .catch(error => {
-            console.error('Erro ao obter os dados existentes:', error);
+        .catch(function(error) {
+          console.error('Ocorreu um erro na requisição PUT:', error);
         });
+    })
+    .catch(function(error) {
+      console.error('Ocorreu um erro na requisição GET:', error);
+    });
+});
+
+function calcularMedia(notas) {
+  var total = 0;
+  for (var i = 0; i < notas.length; i++) {
+    total += notas[i];
+  }
+  return total / notas.length;
 }
-
-
-
-// Associar o evento de envio do formulário à função de manipulação
-const form = document.getElementById('avaliacaoForm');
-form.addEventListener('submit', handleFormSubmit);
