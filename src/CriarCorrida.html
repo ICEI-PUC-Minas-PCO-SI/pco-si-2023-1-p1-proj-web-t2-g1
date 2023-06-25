@@ -13,6 +13,152 @@
         crossorigin="anonymous"></script>
     <title>PUCarona</title>
     <link rel="shortcut icon" href="images/logo-sem-fundo.png" type="image/x-icon">
+
+    <!-- funcoes de pegar o CEP -->
+
+    <script>
+    
+        function limpa_formulário_cep1() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua1').value=("");
+                document.getElementById('bairro1').value=("");
+                document.getElementById('cidade1').value=("");
+                document.getElementById('uf1').value=("");
+                
+        }
+    
+        function meu_callback1(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua1').value=(conteudo.logradouro);
+                document.getElementById('bairro1').value=(conteudo.bairro);
+                document.getElementById('cidade1').value=(conteudo.localidade);
+                document.getElementById('uf1').value=(conteudo.uf);
+                
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep1();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep1(valor) {
+    
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+    
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua1').value="...";
+                    document.getElementById('bairro1').value="...";
+                    document.getElementById('cidade1').value="...";
+                    document.getElementById('uf1').value="...";
+                    
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback1';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep1();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep1();
+            }
+        };
+
+
+        function limpa_formulário_cep2() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua2').value=("");
+                document.getElementById('bairro2').value=("");
+                document.getElementById('cidade2').value=("");
+                document.getElementById('uf2').value=("");
+                
+        }
+    
+        function meu_callback2(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua2').value=(conteudo.logradouro);
+                document.getElementById('bairro2').value=(conteudo.bairro);
+                document.getElementById('cidade2').value=(conteudo.localidade);
+                document.getElementById('uf2').value=(conteudo.uf);
+                
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep2();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep2(valor) {
+    
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+    
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua2').value="...";
+                    document.getElementById('bairro2').value="...";
+                    document.getElementById('cidade2').value="...";
+                    document.getElementById('uf2').value="...";
+                    
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback2';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep2();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep2();
+            }
+        };
+    
+        </script>
+
+
+
 </head>
 
 <body>
@@ -53,33 +199,60 @@
             <h3 class="row d-flex justify-content-center mt-5 mx-auto  " style="padding: 10px 0px;">Criar Corrida</h3>
 
             <div class="container">
-                <div id="login-row" class="row justify-content-center align-items-center">
-                    <div id="login-column" class="col-md-6">
+                <div id="CR-row" class="row justify-content-center align-items-center">
+                    <div id="CR-column" class="col-md-6">
                         <div class="box">
 
                             <br class="float">
                             <br class="form" action="">
                             <div class="form-group">
-                                <div class="input-group">
-                  <div class="input-group-text"><svg width="15px" height="15px">
-                  <path
-                    d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 ">
-                  </path>
-                </svg></div>
-                  <input type="text" class="form-control" name="saidaCorrida" 
- id="saidaCorrida" placeholder="Saida">
+                               <div class="input-group"> 
+                 
+                  <!--<input type="text" class="form-control" name="saidaCorrida" 
+ id="saidaCorrida" placeholder="Saida">-->
+ 
+ 
+ <form method="get" action=".">
+    <label>Saida:
+    <input name="cep" type="text" id="cep1" class="form-control" value=""  size="10" maxlength="9" placeholder="Cep"
+           onblur="pesquisacep1(this.value);" /></label><br />
+    
+    <input name="rua" class="form-control" placeholder="Rua" type="text" id="rua1" size="50" /></label>
+    
+    <input name="bairro" class="form-control" placeholder="Bairro" type="text" id="bairro1" size="10" /></label>
+    
+    <input name="cidade" class="form-control" placeholder="Cidade" type="text" id="cidade1" size="10" /></label>
+    
+    <input name="uf" type="text" class="form-control" placeholder="Uf" id="uf1" size="10" /></label>
+    
+    <input name="complemento" class="form-control" placeholder="Complemento" type="text" id="complemento1" size="10" /></label>
+  </form>  
+
                 </div>
                               <br>
                             </div>
                           <div class="form-group">
                                <div class="input-group">
-                  <div class="input-group-text"><svg width="15px" height="15px">
-                  <path
-                    d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 ">
-                  </path>
-                </svg></div>
-                   <input type="text" name="destinoCorrida" id="destinoCorrida" class="form-control text-black-50" placeholder="destino">
-                </div>
+
+                                <form method="get" action=".">
+                                    <label>Saida:
+                                    <input name="cep" type="text" id="cep2" class="form-control" value=""  size="10" maxlength="9" placeholder="Cep"
+                                           onblur="pesquisacep2(this.value);" /></label><br />
+                                    
+                                    <input name="rua" class="form-control" placeholder="Rua" type="text" id="rua2" size="50" /></label>
+                                    
+                                    <input name="bairro" class="form-control" placeholder="Bairro" type="text" id="bairro2" size="10" /></label>
+                                    
+                                    <input name="cidade" class="form-control" placeholder="Cidade" type="text" id="cidade2" size="10" /></label>
+                                    
+                                    <input name="uf" type="text" class="form-control" placeholder="Uf" id="uf2" size="10" /></label>
+                                    
+                                    <input name="complemento" class="form-control" placeholder="Complemento" type="text" id="complemento2" size="10" /></label>
+                                  </form> 
+
+            
+        
+        </div>
                             </div>
                           <br>
                           
