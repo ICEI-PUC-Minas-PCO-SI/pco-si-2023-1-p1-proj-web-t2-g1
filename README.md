@@ -17,7 +17,7 @@ Uma aplicação que tem como foco, auxiliar alunos da PUC no deslocamento para i
 * Natália Pereira Da Silva
 * Vinicius Celio Fontes Ribeiro
 * Arthur Parreiras Lage Martins
-* Matheus Antonio Barbosa Santos
+
 
 ## Orientador
 
