@@ -15,7 +15,7 @@
     
     <header>
         <div class="logo">
-            <a href="#"><img src="images/logo-sem-fundo.png" alt="logo-pucarona"></a>
+            <a href="../src/template.html"><img src="images/logo-sem-fundo.png" alt="logo-pucarona"></a>
         </div>
         <nav class="navbar navbar-expand-lg" style="padding-top: 15px;">
             <div class="container-fluid">
@@ -53,30 +53,30 @@
                     <div id="login-column" class="col-md-6">
                         <div class="box">
                             <div class="motor">
-                                <img src="/images/motorista.png" alt="Foto de Perfil" style="width: 100px; height: 100px;">
-                                <h5 class="row d-flex justify-content-center mt-5  " style="font-weight: bold; margin: 0px; margin-top: 0px;">JOÃO PEDRO DA SILVA SANTOS</h5>
+                                <img src="images/motorista.png" alt="Foto de Perfil" style="width: 100px; height: 100px; float: left; margin-bottom: 15px;">
+                                <h5 class="row d-flex justify-content-center mt-5  " style="font-weight: bold; margin: 0px; margin-top: 50px;">JOÃO PEDRO DA SILVA SANTOS</h5>
                             </div>
                             <br class="float">
                                 <br class="form" action="">
+                                <form id="avaliacaoForm">
+                                    <br>
                                     <div class="form-group">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Selecione a nota</option>
-                                            <option value="1">5</option>
-                                            <option value="2">4</option>
+                                        <select id="selectNota" class="form-select" aria-label="Default select example">
+                                            <option selected disabled>Selecione a nota</option>
+                                            <option value="5">5</option>
+                                            <option value="4">4</option>
                                             <option value="3">3</option>
-                                            <option value="4">2</option>
-                                            <option value="5">1</option>
-                                          </select>
+                                            <option value="2">2</option>
+                                            <option value="1">1</option>
+                                        </select>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Default select example" placeholder="Digite aqui seu comentário" style="margin-top: 15px;"></select>
                                     <div class="form-group mb-4 d-grid gap-2 col-6 mx-auto">
                                         <input type="submit" name="autenticação" class="btn btn-dark btn-md mt-3" value="ENVIAR">
-                                    </div>                                    
-                                    
-                                    <br>
-                                    <br>
-                                    <br>
+                                    </div>
                                 </form>
+                                    <br>
+                                    <br>
+                                    <br>
                             </div>
                         </div>
                     </div>
@@ -105,5 +105,6 @@
                 
             </div>
     </footer>
+    <script src="avaliar.js" defer></script>
 </body>
 </html>
