@@ -110,7 +110,7 @@ h2{
      width: 310px;
 }
 
-#login .inputbox label{
+ .inputbox label{
     position: absolute;
     top: 50%;
     left: 42%;

@@ -63,17 +63,17 @@
 
                         <div class="inputbox">
                             <h5>Nome</h5>
-                            <input type="text" required>
+                            <input type="text" required id="nome_input">
                         </div>
     
                         <div class="inputbox">
                             <h5>Telefone</h5>
-                            <input type="tel" required>
+                            <input type="tel" required id="tel_input">
                         </div>
 
                         <div class="inputbox">
                             <h5>Gênero</h5>
-                            <select>
+                            <select id="genero">
                                 <option>Outro</option>
                                 <option>Feminino</option>
                                 <option>Masculino</option>
@@ -82,10 +82,6 @@
                             <!--<input type="search" required> -->
                         </div>
 
-                        <div class="inputbox">
-                            <h5>Senha</h5>
-                            <input type="password" required>
-                        </div>
                     </div>
 
                     <hr>
@@ -96,22 +92,22 @@
 
                         <div class="inputbox">
                             <h5>Rua</h5>
-                            <input type="text" required>
+                            <input type="text" required id="tx_endereco">
                         </div>
 
                         <div class="inputbox">
                             <h5>Bairro</h5>
-                            <input type="text" required>
+                            <input type="text" required id="bairro">
                         </div>
 
                         <div class="inputbox">
                             <h5>Número</h5>
-                            <input type="text" required>
+                            <input type="text" required id="numero_casa">
                         </div>
 
                         <div class="inputbox">
                             <h5>Cidade</h5>
-                            <input type="text" required>
+                            <input type="text" required id="cidade">
                         </div>
 
                     </div>
@@ -120,7 +116,7 @@
                     <div class="vinculo">
                         <div class="inputbox">
                             <h5>Vínculo com a Instituição</h5>
-                            <select>
+                            <select id="vinculo">
                                 <option>Aluno</option>
                                 <option>Professor</option>
                                 <option>Funcionário</option>
@@ -128,13 +124,13 @@
                             <!--<input type="search" required> -->
                         </div>
                     </div>
-                        <a href="#" class="btn">Salvar alterações</a>
+                        <a href="#" class="btn" id="btn_SalvarAlteracoes"> Salvar alterações</a>
 
                         <a href="#" class="btn">Cancelar</a>
 
-                        <a href="../src/Excluir-Conta.html" class="btn">Excluir conta</a>
+                        <a href="..\src/Excluir-Conta.html" class="btn">Excluir conta</a>
               
-                        <a href="#" class="btn">Editar veículo</a>
+                        <a href="..\src\cadastro_veiculo.html" class="btn">Editar veículo</a>
                 </div>
                 
             </div>
@@ -161,6 +157,8 @@
                 
             </div>
     </footer>
+
+    <script src="perfil.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
