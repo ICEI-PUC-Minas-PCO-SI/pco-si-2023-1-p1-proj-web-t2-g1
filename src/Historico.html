@@ -50,7 +50,7 @@
                 <p class="topo">maio 14 2023, 18:15</p>
                 <p class="local-partida">Local de Partida</p>
                 <p class="local-destino">Local de chegada</p>
-                <a class="botao" href="Avaliar-Corrida.html">Avaliar</a>
+
                 <a class="botao" href="#" data-bs-toggle="modal" data-bs-target="#modal-window">Detalhes</a>
             </div>
 
@@ -59,7 +59,7 @@
                 <p class="topo">abril 30 2023, 22:25</p>
                 <p class="local-partida">Local de Partida</p>
                 <p class="local-destino">Local de chegada</p>
-                <a class="botao" href="Avaliar-Corrida.html">Avaliar</a>
+
                 <a class="botao" href="#" data-bs-toggle="modal" data-bs-target="#modal-window">Detalhes</a>
             </div>
 
@@ -68,7 +68,7 @@
                 <p class="topo">maio 14 2023, 18:15</p>
                 <p class="local-partida">Local de Partida</p>
                 <p class="local-destino">Local de chegada</p>
-                <a class="botao" href="Avaliar-Corrida.html">Avaliar</a>
+
                 <a class="botao" href="#" data-bs-toggle="modal" data-bs-target="#modal-window">Detalhes</a>
             </div>
 
@@ -77,7 +77,7 @@
                 <p class="topo">abril 30 2023, 22:25</p>
                 <p class="local-partida">Local de Partida</p>
                 <p class="local-destino">Local de chegada</p>
-                <a class="botao" href="Avaliar-Corrida.html">Avaliar</a>
+
                 <a class="botao" href="#" data-bs-toggle="modal" data-bs-target="#modal-window">Detalhes</a>
             </div>
 
@@ -86,7 +86,7 @@
                 <p class="topo">maio 14 2023, 18:15</p>
                 <p class="local-partida">Local de Partida</p>
                 <p class="local-destino">Local de chegada</p>
-                <a class="botao" href="Avaliar-Corrida.html">Avaliar</a>
+
                 <a class="botao" href="#" data-bs-toggle="modal" data-bs-target="#modal-window">Detalhes</a>
             </div>
 
@@ -95,7 +95,7 @@
                 <p class="topo">abril 30 2023, 22:25</p>
                 <p class="local-partida">Local de Partida</p>
                 <p class="local-destino">Local de chegada</p>
-                <a class="botao" href="Avaliar-Corrida.html">Avaliar</a>
+
                 <a class="botao" href="#" data-bs-toggle="modal" data-bs-target="#modal-window">Detalhes</a>
             </div>
         </section>  
@@ -168,20 +168,5 @@
                 
             </div>
     </footer>
-    <script>
-    // Função para armazenar o ID da corrida em localStorage
-        function armazenarIdCorrida(idCorrida) {
-          localStorage.setItem("idCorridaSelecionada", idCorrida);
-        }
-        
-        // Adicionando evento de clique aos botões "Avaliar"
-        var botoesAvaliar = document.getElementsByClassName("botao-avaliar");
-        for (var i = 0; i < botoesAvaliar.length; i++) {
-          botoesAvaliar[i].addEventListener("click", function() {
-            var idCorrida = this.dataset.idcorrida;
-            armazenarIdCorrida(idCorrida);
-          });
-        }
-        </script>
 </body>
 </html>
