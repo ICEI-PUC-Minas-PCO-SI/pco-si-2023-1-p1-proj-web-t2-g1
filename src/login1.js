@@ -1,191 +1,37 @@
+const URL = 'http://localhost:3000/usuarios';
 
-function limparLocalStorage() {
-    localStorage.removeItem('dbUsuario');
-  }
-  
-  function salvarUsuarios() {
-    let objDado = {
-      usuarios: [
-        { email: "emailteste@.com", senha: "123" },
-        { email: "adim@gmail", senha: "1234" }
-      ],
-      perfis: [],
-      veiculo: []
-    };
-  
-    objDado.usuarios = objDado.usuarios.filter(usuario => Object.keys(usuario).length !== 0);
-  
+function realizarLogin() {
+    const email = document.getElementById('email_input').value;
+    const senha = document.getElementById('senha_input').value;
 
-      // Verificar se os dados já existem no localStorage
-  let dadosExistentes = localStorage.getItem('dbUsuario');
+    fetch(URL)
+        .then(res => res.json())
+        .then(usuarios => {
+            const usuarioEncontrado = usuarios.find(usuario => usuario.email === email && usuario.senha === senha);
 
-  if (dadosExistentes) {
-    // Se os dados já existem, apenas atualize a variável objDado
-    objDado = JSON.parse(dadosExistentes);
-  } else {
-    // Caso contrário, salve os dados iniciais no localStorage
-    localStorage.setItem('dbUsuario', JSON.stringify(objDado));
-  }
+            if (usuarioEncontrado) {
 
-
-
-    localStorage.setItem('dbUsuario', JSON.stringify(objDado));
-  }
-  
-  function ler() {
-    let strDado = localStorage.getItem('dbUsuario');
-    let objDado = {};
-  
-    if (strDado) {
-      objDado = JSON.parse(strDado);
-    } else {
-      objDado = { usuarios: [{ email: "emailteste@.com", senha: "123" }] };
-    }
-  
-    objDado.usuarios = objDado.usuarios.filter(usuario => Object.keys(usuario).length !== 0);
-  
-    return objDado;
-  }
-  
-  function Salvar(dado) {
-    localStorage.setItem('dbUsuario', JSON.stringify(dado));
-  }
-  
-  function incluirUsuario(email, senha) {
-    let objDado = ler();
-  
-    let novoUsuario = {
-      email: email,
-      senha: senha
-    };
-  
-    objDado.usuarios.push(novoUsuario);
-    Salvar(objDado);
-  }
-  
-  function verificarCredenciais(email, senha) {
-    let objDado = ler();
-    let usuarios = objDado.usuarios;
-  
-    for (let i = 0; i < usuarios.length; i++) {
-      if (usuarios[i].email === email && usuarios[i].senha === senha) {
-        return true; // Credenciais válidas
-      }
-    }
-  
-    return false; // Credenciais inválidas
-  }
-  
-  document.getElementById('btnEntrar').addEventListener('click', function() {
-    let email = document.getElementById('email_input').value;
-    let senha = document.getElementById('senha_input').value;
-  
-    if (verificarCredenciais(email, senha)) {
-        // Credenciais válidas, armazenar o email no localStorage
-        localStorage.setItem('emailUsuario', email);
-        window.location.href = 'file:///C:/Users/Barbara%20Xavier/OneDrive%20-%20sga.pucminas.br/StudioCode/TODAS%20TELAS%20TIAW/src/Corridas-Disponiveis.html';
-    
-        // Redirecionar para a próxima página ou executar outras ações
-      } else {
-        // Credenciais inválidas, exibir mensagem de erro
-        alert('Email ou senha incorretos. Por favor, tente novamente ou crie uma nova conta.');
-      }
-    });
-  
-  // Chamar a função para salvar os usuários corretos
-  salvarUsuarios();
-  
-
-
-
-  /*
-  
-// Chamar a função para carregar os usuários do arquivo JSON
-carregarUsuarios();
-
-function limparLocalStorage() {
-  localStorage.removeItem('dbUsuario');
-}
-
-function carregarUsuarios() {
-  fetch('db_usuarios.json')
-    .then(response => response.json())
-    .then(data => {
-      let objDado = { usuarios: data.usuarios };
-      Salvar(objDado);
-    })
-    .catch(error => {
-      console.error('Ocorreu um erro ao carregar o arquivo JSON:', error);
-    });
-}
-
-function ler() {
-  let strDado = localStorage.getItem('dbUsuario');
-  let objDado = {};
-
-  if (strDado) {
-    objDado = JSON.parse(strDado);
-  }
-
-  objDado.usuarios = objDado.usuarios.filter(usuario => Object.keys(usuario).length !== 0);
-
-  return objDado;
-}
-
-function Salvar(dado) {
-  localStorage.setItem('dbUsuario', JSON.stringify(dado));
-}
-
-function incluirUsuario(username, email, senha, telefone, carro, placa) {
-  let objDado = ler();
-
-  let novoUsuario = {
-    id: objDado.usuarios.length + 1,
-    username: username,
-    email: email,
-    senha: senha,
-    telefone: telefone,
-    carro: carro,
-    placa: placa
-  };
-
-  objDado.usuarios.push(novoUsuario);
-  Salvar(objDado);
-}
-function verificarCredenciais(email, senha) {
-  let objDado = ler();
-  let usuarios = objDado.usuarios;
-
-  for (let i = 0; i < usuarios.length; i++) {
-    if (usuarios[i].email === email && usuarios[i].senha === senha) {
-      return true; // Credenciais válidas
-    }
-  }
-
-  return false; // Credenciais inválidas
+               // Armazena o ID do usuário logado no localStorage
+                localStorage.setItem('idUsuarioLogado', usuarioEncontrado.id);
+                
+                // Usuário válido, redirecionar para a página de sucesso ou executar alguma ação desejada
+                window.location.href = 'file:///C:/Users/Barbara%20Xavier/Documents/GitHub/pco-si-2023-1-p1-proj-web-t2-g1/src/Corridas-Disponiveis.html';
+            } else {
+                // Usuário inválido, exibir mensagem de erro ou executar alguma ação desejada
+                alert('Email ou senha inválidos. Tente novamente, ou faça o cadastro');
+            }
+        })
+        .catch(error => {
+            // Ocorreu um erro ao carregar os usuários do JSON
+            console.error('Erro ao carregar usuários:', error);
+        });
 }
 
 
-document.getElementById('btnEntrar').addEventListener('click', function() {
-  let email = document.getElementById('email_input').value;
-  let senha = document.getElementById('senha_input').value;
+// Função para salvar as alterações do usuário logado
+function salvarAlteracoes() {
+    const idUsuarioLogado = localStorage.getItem('idUsuarioLogado'); // Obtém o ID do usuário logado do localStorage
+}
 
-  if (verificarCredenciais(email, senha)) {
-    // Credenciais válidas, armazenar o email no localStorage
-    localStorage.setItem('emailUsuario', email);
-    window.location.href = 'file:///C:/Users/Barbara%20Xavier/OneDrive%20-%20sga.pucminas.br/StudioCode/TODAS%20TELAS%20TIAW/src/Corridas-Disponiveis.html';
-
-    // Redirecionar para a próxima página ou executar outras ações
-  } else {
-    // Credenciais inválidas, exibir mensagem de erro
-    alert('Email ou senha incorretos. Por favor, tente novamente ou crie uma nova conta.');
-  }
-});
-
-// Chamar a função para carregar os usuários do arquivo JSON
-carregarUsuarios();
-
-
-*/
 
 

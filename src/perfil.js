@@ -1,67 +1,72 @@
-function salvarDadosPerfil() {
-    // Capturar o email do usuário logado no localStorage
-    let emailUsuario = localStorage.getItem('emailUsuario');
-  
-    // Verificar se o email do usuário está definido
-    if (emailUsuario) {
-      // Capturar os valores dos campos de entrada
-      let nome = document.getElementById('nome_input').value;
-      let telefone = document.getElementById('tel_input').value;
-      let genero = document.getElementById('genero').value;
-      let endereco = document.getElementById('tx_endereco').value;
-      let bairro = document.getElementById('bairro').value;
-      let numeroCasa = document.getElementById('numero_casa').value;
-      let cidade = document.getElementById('cidade').value;
-      let vinculo = document.getElementById('vinculo').value;
-  
-      // Criar um objeto com os valores capturados
-      let dadosPerfil = {
-        email: emailUsuario,
-        nome: nome,
-        telefone: telefone,
-        genero: genero,
-        endereco: endereco,
-        bairro: bairro,
-        numeroCasa: numeroCasa,
-        cidade: cidade,
-        vinculo: vinculo
-      };
-  
-      // Ler os dados existentes no localStorage
-      let objDado = JSON.parse(localStorage.getItem('dbUsuario'));
+const URL = 'http://localhost:3000/usuarios';
 
-      
-    // Verificar se já existe um perfil com o mesmo email
-    let perfilExistente = objDado.perfis.find(perfil => perfil.email === emailUsuario);
+function salvarAlteracoes() {
+    const idUsuarioLogado = localStorage.getItem('idUsuarioLogado'); // Obtém o ID do usuário logado do localStorage
+    
+    const nome = document.getElementById('nome_input').value;
+    const telefone = document.getElementById('tel_input').value;
+    const genero = document.getElementById('genero').value;
+    const rua = document.getElementById('tx_endereco').value;
+    const bairro = document.getElementById('bairro').value;
+    const numero = document.getElementById('numero_casa').value;
+    const cidade = document.getElementById('cidade').value;
+    const vinculo = document.getElementById('vinculo').value;
 
-    if (perfilExistente) {
-      // Atualizar o perfil existente com os novos dados
-      perfilExistente.nome = nome;
-      perfilExistente.telefone = telefone;
-      perfilExistente.genero = genero;
-      perfilExistente.endereco = endereco;
-      perfilExistente.bairro = bairro;
-      perfilExistente.numeroCasa = numeroCasa;
-      perfilExistente.cidade = cidade;
-      perfilExistente.vinculo = vinculo;
+    fetch(`${URL}/${idUsuarioLogado}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            nome,
+            telefone,
+            genero,
+            rua,
+            bairro,
+            numero,
+            cidade,
+            vinculo
+        })
+    })
+        .then(res => res.json())
+        .then(usuarioAtualizado => {
+            console.log('Dados do usuário atualizados:', usuarioAtualizado);
+            // Executar alguma ação desejada após salvar as alterações
+            alert('Dados do usuário atualizados com sucesso!');
+        })
+        .catch(error => {
+            // Ocorreu um erro ao salvar as alterações
+            console.error('Erro ao salvar as alterações:', error);
+        });
+}
+
+function verificarUsuarioLogado() {
+    const idUsuarioLogado = localStorage.getItem('idUsuarioLogado');
+    if (idUsuarioLogado) {
+        fetch(`${URL}/${idUsuarioLogado}`)
+            .then(res => res.json())
+            .then(usuario => {
+                document.getElementById('nome_input').value = usuario.nome;
+                document.getElementById('tel_input').value = usuario.telefone;
+                document.getElementById('genero').value = usuario.genero;
+                document.getElementById('tx_endereco').value = usuario.rua;
+                document.getElementById('bairro').value = usuario.bairro;
+                document.getElementById('numero_casa').value = usuario.numero;
+                document.getElementById('cidade').value = usuario.cidade;
+                document.getElementById('vinculo').value = usuario.vinculo;
+            })
+            .catch(error => {
+                console.error('Erro ao recuperar dados do usuário:', error);
+            });
     } else {
-      // Adicionar o perfil do usuário atual ao array de perfis
-      objDado.perfis.push(dadosPerfil);
+        alert('Nenhum usuário logado. Faça o login para acessar essa página!');
+        window.location.href = 'login.html';
     }
+}
 
-  
-      // Adicionar o perfil do usuário atual ao array de perfis
-     // objDado.perfis.push(dadosPerfil);
-  
-      // Salvar os dados atualizados no localStorage
-      localStorage.setItem('dbUsuario', JSON.stringify(objDado));
-    } else {
-      // Caso o email do usuário não esteja definido
-      alert('Usuário não autenticado. Faça login antes de salvar os dados do perfil.');
-    }
-  }
-  
-  document.getElementById('btn_SalvarAlteracoes').addEventListener('click', salvarDadosPerfil);
-  
+document.getElementById('btn_SalvarAlteracoes').addEventListener('click', function(event) {
+    event.preventDefault();
+    salvarAlteracoes();
+});
 
-
+window.addEventListener('DOMContentLoaded', verificarUsuarioLogado);
