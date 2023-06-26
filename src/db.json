@@ -29,10 +29,10 @@
       "numero": "234",
       "cidade": "Contagem",
       "vinculo": "Professor",
-      "modelo": "",
-      "placa": "",
-      "CNH": "",
-      "CRLV": ""
+      "modelo": "sedan",
+      "placa": "otm2020",
+      "CNH": "000123456789",
+      "CRLV": "444"
     }
   ],
   "corridas": [
