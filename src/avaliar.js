@@ -1,25 +1,34 @@
-const url = "http://localhost:3000/corridas";
+document.getElementById("avaliacaoForm").addEventListener("submit", function(event) {
+  event.preventDefault(); 
 
-function salvarAvaliacao() {
-  const nota = document.getElementById("inputNota").value;
+  var idCorrida = document.getElementById("inputIDCorrida").value;
+  var nota = document.getElementById("inputNota").value;
 
-  fetch(`${url}/1`, {
-    method: "PATCH",
+
+  const URL = "http://localhost:3000/corridas/" + idCorrida;
+
+  // faz a requisição
+  var request = new Request(URL, {
+    method: 'PATCH',
     headers: {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       avaliacao: nota
     })
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log("Avaliação salva:", data);
-    })
-    .catch(error => {
-      console.error("Erro ao salvar avaliação:", error);
-    });
-}
+  });
 
-const botaoSalvarAvaliacao = document.getElementById("botaoSalvarAvaliacao");
-botaoSalvarAvaliacao.addEventListener("click", salvarAvaliacao);
+  // Envia a requisição
+  fetch(request)
+    .then(function(response) {
+      if (response.ok) {
+        alert("Avaliação enviada, agradecemos sua contribuição.");
+        window.open("Historico.html");
+      } else {
+        console.log("Erro ao salvar a avaliação.");
+      }
+    })
+    .catch(function(error) {
+      console.log("Erro na requisição:", error);
+    });
+});

@@ -158,7 +158,30 @@
       "telefoneInteressado": "",
       "sexoInteressado": "",
       "vinculoInteressado": "",
-      "avaliacao": ""
+      "avaliacao": "1"
+    },
+    {
+      "id": "YkKAkag",
+      "idCriador": "7",
+      "saidaCEP": "",
+      "saidaRua": "",
+      "saidaBairro": "",
+      "saidaCidade": "",
+      "saidaUF": "",
+      "saidaNumero": "",
+      "destinoCEP": "",
+      "destinoRua": "",
+      "destinoBairro": "",
+      "destinoCidade": "",
+      "destinoUF": "",
+      "destinoNumero": "",
+      "tipo": "Veiculo Proprio",
+      "valor": "",
+      "nomeInteressado": "",
+      "telefoneInteressado": "",
+      "sexoInteressado": "",
+      "vinculoInteressado": "",
+      "avaliacao": "1"
     }
   ]
 }
