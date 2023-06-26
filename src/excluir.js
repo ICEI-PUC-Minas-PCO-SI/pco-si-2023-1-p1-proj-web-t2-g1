@@ -1,40 +1,23 @@
-// Função para excluir um usuário pelo ID
-function excluirUsuario(id) {
-    const xhr = new XMLHttpRequest();
-    
-    xhr.open('DELETE', '/excluir-usuario');
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          console.log('Usuário excluído com sucesso.');
-        } else {
-          console.log('Falha ao excluir o usuário.');
-        }
-      }
-    };
-    
-    xhr.send(JSON.stringify({ id: id }));
-  }
-  
+const url = "http://localhost:3000/usuarios";
 
-  
-  
-  
-  // Capturar o formulário de exclusão
-  const form = document.querySelector('form');
-  
-  // Adicionar um ouvinte de evento para o envio do formulário
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o envio do formulário
-  
-    // Obter o ID do usuário selecionado no formulário
-    const select = document.querySelector('select');
-    const selectedOption = select.options[select.selectedIndex];
-    const id = parseInt(selectedOption.value);
-  
-  // Chamar a função para excluir o usuário com o ID 1
-  excluirUsuario(1);
-  });
-  
+const btnDelete = document.getElementById('btn-delete');
+btnDelete.addEventListener('click', () => {
+  const idUsuarioLogado = localStorage.getItem('idUsuarioLogado'); // Obtém o ID do usuário logado do localStorage da pag de login
+
+  if (idUsuarioLogado) {
+    fetch(`${url}/${idUsuarioLogado}`, {
+      method: 'DELETE',
+    })
+      .then(() => {
+        console.log(`Usuário com ID ${idUsuarioLogado} excluído com sucesso.`);
+        alert('Usuário excluído com sucesso.');
+        location.reload(); // Recarrega a página após excluir o usuário
+      })
+      .catch(error => {
+        console.error('Erro ao excluir usuário:', error);
+        alert('Erro ao excluir usuário.');
+      });
+  } else {
+    alert('Nenhum usuário logado. Faça o login primeiro.');
+  }
+});
