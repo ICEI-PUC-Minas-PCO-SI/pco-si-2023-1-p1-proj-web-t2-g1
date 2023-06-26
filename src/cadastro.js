@@ -29,6 +29,11 @@ function Cadastro(event) {
         alert('As senhas informadas não conferem.');
         return;
     }
+    if (email !== '@sga.pucminas.br') {
+        alert('O email não está autorizado.');
+        return;
+    }
+    
 
     // Crie um objeto com os dados do usuário
     let usuario = {
@@ -50,7 +55,7 @@ function Cadastro(event) {
 
 
 // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
-document.getElementById ('cadastrar').addEventListener ('submit', Cadastro);
+document.getElementById ('cadastrar').addEventListener ('click', Cadastro);
 
 
 // Associar salvamento ao botao
