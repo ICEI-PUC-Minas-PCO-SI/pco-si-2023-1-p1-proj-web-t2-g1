@@ -15,7 +15,7 @@ function realizarLogin() {
                 localStorage.setItem('idUsuarioLogado', usuarioEncontrado.id);
                 
                 // Usuário válido, redirecionar para a página de sucesso ou executar alguma ação desejada
-                window.location.href = 'file:///C:/Users/Barbara%20Xavier/Documents/GitHub/pco-si-2023-1-p1-proj-web-t2-g1/src/Corridas-Disponiveis.html';
+                window.location.href = 'Corridas-Disponiveis.html';
             } else {
                 // Usuário inválido, exibir mensagem de erro ou executar alguma ação desejada
                 alert('Email ou senha inválidos. Tente novamente, ou faça o cadastro');
