@@ -16,7 +16,7 @@ function processaFormLogin (event) {
         alert ('Usuário ou senha incorretos');
     }
 }
-function cadastro(event) {
+function Cadastro(event) {
     event.preventDefault();
 
     // Obtenha os dados do formulário
@@ -50,16 +50,16 @@ function cadastro(event) {
 
 
 // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
-document.getElementById ('login-form').addEventListener ('submit', processaFormLogin);
+document.getElementById ('cadastrar').addEventListener ('submit', Cadastro);
 
 
 // Associar salvamento ao botao
-document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin); 
+//document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin); 
 
 // Converta o objeto JSON para uma string
-    var dadosCadastroString = JSON.stringify(dadosCadastro);
+   // var dadosCadastroString = JSON.stringify(dadosCadastro);
 
-    // Envio via AJAX usando a biblioteca axios:
+    /*// Envio via AJAX usando a biblioteca axios:
     axios.post('/salvar-cadastro', dadosCadastroString)
         .then(function(response) {
             console.log(response.data); // Resposta do servidor
@@ -73,14 +73,14 @@ document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin);
    // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
    if (!usuarioCorrente.login) {
     window.location.href = LOGIN_URL;
-}
+}*/
 
 function exibeUsuarios() {
     
     // Popula a tabela com os registros do banco de dados
     let listaUsuarios = '';
-    for (i = 0; i < db_usuarios.usuarios.length; i++) {
-        let usuario = db_usuarios.usuarios[i];
+    for (i = 0; i < db.usuarios.length; i++) {
+        let usuario = db.usuarios[i];
         listaUsuarios += `<tr><td scope="row">${usuario.username}</td><td>${usuario.email}</td><td>${usuario.senha}</td></tr>`;
     }
 
@@ -89,7 +89,7 @@ function exibeUsuarios() {
 
 }
 
-function initPage() {
+/*function initPage() {
 
     // Associa a função de logout ao botão
         document.getElementById('btn_logout').addEventListener('click', logoutUser);
@@ -102,4 +102,4 @@ function initPage() {
 }
 
 // Associa ao evento de carga da página a função para verificar se o usuário está logado
-window.addEventListener('load', initPage);
+window.addEventListener('load', initPage);*/
