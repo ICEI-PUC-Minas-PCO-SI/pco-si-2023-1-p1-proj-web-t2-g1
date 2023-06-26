@@ -15,7 +15,7 @@ criarCorrida.addEventListener('submit', (e) => {
         saidaUF: document.getElementById('uf1').value,
         saidaNumero: document.getElementById('complemento1').value,
         
-       
+
         destinoCEP: document.getElementById('cep2').value,
         destinoRua: document.getElementById('rua2').value,
         destinoBairro: document.getElementById('bairro2').value,
@@ -23,8 +23,8 @@ criarCorrida.addEventListener('submit', (e) => {
         destinoUF: document.getElementById('uf2').value,
         destinoNumero: document.getElementById('complemento2').value,
         
-            tipo: document.getElementById('floatingSelect').value,
-            valor: document.getElementById('valor').value
+        tipo: document.getElementById('tipoCorrida').value,
+        valor: document.getElementById('valor').value
     });
 
     fetch(URL, {
