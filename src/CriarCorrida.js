@@ -63,12 +63,20 @@ function salvarCorridas() {
                 body: corrida
             })
             .then(res => res.json())
-            .then(() => location.reload());
+            .then(corridaSalva => {
+                const mensagem = `Corrida criada com sucesso! ID: ${corridaSalva.id}. Salve este código para avaliar sua corrida!`;
+
+                if (confirm(mensagem)) {
+                    window.open('Corridas-Disponiveis.html');
+                } else {
+                    location.reload();
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao criar a corrida:', error);
+            });
         });
-
-        window.open('Corridas-Disponiveis.html');
 }
-
             /*fetch(`${URL}/corridas`)
                 .then(res => res.json())
                 .then(data => {
@@ -165,6 +173,6 @@ function salvarCorridas() {
 document.getElementById('btn_SalvarCorrida').addEventListener('click', function(event) {
     event.preventDefault();
     salvarCorridas();
-});
 
 //window.addEventListener('DOMContentLoaded', verificarUsuarioLogado);
+});
