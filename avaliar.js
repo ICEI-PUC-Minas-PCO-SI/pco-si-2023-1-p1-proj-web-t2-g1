@@ -1,42 +1,25 @@
 const url = "http://localhost:3000/corridas";
 
-// Função para armazenar o ID da corrida em localStorage
-function armazenarIdCorrida(idCorrida) {
-  localStorage.setItem("idCorridaSelecionada", idCorrida);
-}
-let  = document.getElementById('avaliacao').value;
-// Função para enviar a avaliação da corrida
-function enviarAvaliacao() {
-  var idCorrida = localStorage.getItem("idCorridaSelecionada");
-  var avaliacao = document.getElementById("inputAvaliacao").value;
-  
-  // Construir o objeto com os dados a serem enviados
-  var dados = {
-    idCorrida: idCorrida,
-    avaliacao: avaliacao
-  };
+function salvarAvaliacao() {
+  const nota = document.getElementById("inputNota").value;
 
-  // Enviar a avaliação para o servidor
-  fetch(url, {
-    method: "PUT",
+  fetch(`${url}/1`, {
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(dados)
+    body: JSON.stringify({
+      avaliacao: nota
+    })
   })
     .then(response => response.json())
     .then(data => {
-      console.log("Avaliação enviada:", data);
-      // Limpar o ID da corrida armazenado em localStorage
-      localStorage.removeItem("idCorridaSelecionada");
-      // Redirecionar para a página "historico.html"
-      window.location.href = "historico.html";
+      console.log("Avaliação salva:", data);
     })
     .catch(error => {
-      console.error("Erro ao enviar avaliação:", error);
+      console.error("Erro ao salvar avaliação:", error);
     });
 }
 
-// Adicionando evento de clique ao botão de envio da avaliação
-var botaoEnviarAvaliacao = document.getElementById("botaoEnviarAvaliacao");
-botaoEnviarAvaliacao.addEventListener("click", enviarAvaliacao);
+const botaoSalvarAvaliacao = document.getElementById("botaoSalvarAvaliacao");
+botaoSalvarAvaliacao.addEventListener("click", salvarAvaliacao);
