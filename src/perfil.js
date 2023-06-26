@@ -60,7 +60,7 @@ function verificarUsuarioLogado() {
             });
     } else {
         alert('Nenhum usuário logado. Faça o login para acessar essa página!');
-        window.location.href = 'login.html';
+        //window.location.href = 'login.html';
     }
 }
 

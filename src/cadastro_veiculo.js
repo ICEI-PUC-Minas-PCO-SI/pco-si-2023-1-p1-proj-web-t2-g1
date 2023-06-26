@@ -1,43 +1,60 @@
-function salvarDadosVeiculos(){
-    
-    let emailUsuario = localStorage.getItem('emailUsuario');
+const URL = 'http://localhost:3000/usuarios';
 
-    if(emailUsuario){
+function salvarAlteracoesVeiculo() {
+  const idUsuarioLogado = localStorage.getItem('idUsuarioLogado'); // Obtém o ID do usuário logado do localStorage
 
-        let cnh = document.getElementById('cnh').value;
-        let crlv = document.getElementById('crlv').value;
-        let placa = document.getElementById('placa').value;
-        let modelo = document.getElementById('modelo').value;
+  const CNH = document.getElementById('cnh').value;
+  const CRLV = document.getElementById('crlv').value;
+  const placa = document.getElementById('placa').value;
+  const modelo = document.getElementById('modelo').value;
 
-        let dadosVeiculo = {
-            email: emailUsuario,
-            cnh: cnh,
-            crlv: crlv,
-            placa: placa,
-            modelo: modelo
-        };
+  fetch(`${URL}/${idUsuarioLogado}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      CNH,
+      CRLV,
+      placa,
+      modelo
+    })
+  })
+    .then(res => res.json())
+    .then(usuarioAtualizado => {
+      console.log('Dados do usuário atualizados:', usuarioAtualizado);
+      // Executar alguma ação desejada após salvar as alterações
+      alert('Dados do veículo atualizados com sucesso!');
+    })
+    .catch(error => {
+      // Ocorreu um erro ao salvar as alterações
+      console.error('Erro ao salvar as alterações:', error);
+    });
+}
 
+function verificarUsuarioLogado() {
+  const idUsuarioLogado = localStorage.getItem('idUsuarioLogado');
+  if (idUsuarioLogado) {
+    fetch(`${URL}/${idUsuarioLogado}`)
+      .then(res => res.json())
+      .then(usuario => {
+        document.getElementById('cnh').value = usuario.CNH;
+        document.getElementById('crlv').value = usuario.CRLV;
+        document.getElementById('placa').value = usuario.placa;
+        document.getElementById('modelo').value = usuario.modelo;
+      })
+      .catch(error => {
+        console.error('Erro ao recuperar dados do usuário:', error);
+      });
+  } else {
+    alert('Nenhum usuário logado. Faça o login para acessar essa página!');
+    // window.location.href = 'login.html';
+  }
+}
 
-        let objDado = JSON.parse(localStorage.getItem('db_usuario'));
+document.getElementById('btn_salvarVeiculos').addEventListener('click', function(event) {
+  event.preventDefault();
+  salvarAlteracoesVeiculo();
+});
 
-        let perfilExistente = objDado.perfis.find(perfil => perfil.email === emailUsuario);
-
-        if(perfilExistente){
-            perfilExistente.cnh = cnh;
-            perfilExistente.crlv = crlv;
-            perfilExistente.placa = placa;
-            perfilExistente.modelo = modelo;
-        }else{
-            objDado.veiculo.push(dadosVeiculo);
-        }
-
-        localStorage.setItem('dbUsuario', JSON.stringify(objDado));
-
-    }else{
-        alert('usuário não autenticado');
-
-    }
-
-    document.getElementById('btn_salvarAlteracoes').addEventListener('click', salvarDadosVeiculos);
-
-    }
+window.addEventListener('DOMContentLoaded', verificarUsuarioLogado);
