@@ -41,19 +41,7 @@
               </div>
             </div>
           </nav>
-        <!--<nav>
-            <ul class="menu">
-                <li>
-                    <a href="#">Criar Corrida</a>
-                </li>
-                <li>
-                    <a href="">Corridas Disponíveis</a>
-                </li>
-                <li>
-                    <a href="#">Editar Perfil</a>
-                </li>
-            </ul>
-        </nav>-->
+        
     </header>
 
   <section>
@@ -64,29 +52,29 @@
             <div class="container">
                 <div class="inputbox">
                     <h5>CNH</h5>
-                    <input type="text" required>
+                    <input type="text" required id="cnh">
                 </div>
 
                 <div class="inputbox">
                     <h5>CRLV</h5>
-                    <input type="tel" required>
+                    <input type="tel" required id="crlv">
                 </div>
 
                 <div class="inputbox">
                     <h5>Placa do veículo</h5>
-                    <input type="text" required>
+                    <input type="text" required id="placa">
                 </div>
 
                 <div class="inputbox">
                     <h5>Modelo do veículo</h5>
-                    <input type="tel" required>
+                    <input type="tel" required id="modelo">
                 </div>
 
 
             </div>
-            <a href="#" class="btn">Salvar alterações</a>
+            <a href="#" class="btn" id="btn_salvarVeiculos">Salvar alterações</a>
 
-            <a href="#" class="btn">Cancelar</a>
+            <a href="perfil.html" class="btn">Cancelar</a>
         </div>
     </div>
    
@@ -116,6 +104,9 @@
                 
             </div>
     </footer>
+
+
+    <script src="cadastro_veiculo.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

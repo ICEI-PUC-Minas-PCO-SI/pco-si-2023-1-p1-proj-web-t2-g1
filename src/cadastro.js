@@ -16,29 +16,38 @@ function processaFormLogin (event) {
         alert ('Usuário ou senha incorretos');
     }
 }
+function cadastro(event) {
+    event.preventDefault();
 
-function cadastro (event) {
-// Cancela a submissão do formulário para tratar sem fazer refresh da tela
-event.preventDefault ();
+    // Obtenha os dados do formulário
+    let nome = document.getElementById('username').value;
+    let email = document.getElementById('email').value;
+    let senha = document.getElementById('password').value;
+    let senha2 = document.getElementById('password2').value;
 
-// Obtem os dados do formulário
-let nome   = document.getElementById('username').value;
-let email  = document.getElementById('email').value;
-let senha  = document.getElementById('password').value;
-let senha2 = document.getElementById('password2').value;
-if (senha != senha2) {
-    alert ('As senhas informadas não conferem.');
-    return
+    if (senha !== senha2) {
+        alert('As senhas informadas não conferem.');
+        return;
+    }
+
+    // Crie um objeto com os dados do usuário
+    let usuario = {
+        nome: nome,
+        email: email,
+        senha: senha
+    };
+
+    // Converta o objeto em uma string JSON
+    let usuarioJSON = JSON.stringify(usuario);
+
+    console.log(usuarioJSON); // Exibe o JSON no console do navegador
+
+    // Salve a string JSON em um arquivo separado
+    salvarJSON(usuarioJSON);
+
+    alert('Usuário salvo com sucesso. Proceda com o login para continuar.');
 }
 
-// Adiciona o usuário no banco de dados
-addUser (nome, senha, email);
-alert ('Usuário salvo com sucesso. Proceda com o login para ');
-
-// Oculta a div modal do login
-//document.getElementById ('loginModal').style.display = 'none';
-//$('#loginModal').modal('hide');
-}
 
 // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
 document.getElementById ('login-form').addEventListener ('submit', processaFormLogin);
@@ -83,7 +92,7 @@ function exibeUsuarios() {
 function initPage() {
 
     // Associa a função de logout ao botão
-    document.getElementById('btn_logout').addEventListener('click', logoutUser);
+        document.getElementById('btn_logout').addEventListener('click', logoutUser);
 
     // Informa o nome do usuário logado
     document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
