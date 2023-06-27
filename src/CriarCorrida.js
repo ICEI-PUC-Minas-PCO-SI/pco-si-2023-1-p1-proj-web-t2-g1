@@ -55,7 +55,7 @@ function salvarCorridas() {
                 avaliacao: ''
             });
 
-            fetch(`${URL}/corridas`, {
+            fetch(`${URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
