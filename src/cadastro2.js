@@ -41,7 +41,7 @@ function CadastraUsuario() {
     .then(res => res.json())
     .then(() => location.reload());
 
-    window.open('login.html');
+    window.open('..\src\login.html');
 }
 
 function VerificaSenha () {
