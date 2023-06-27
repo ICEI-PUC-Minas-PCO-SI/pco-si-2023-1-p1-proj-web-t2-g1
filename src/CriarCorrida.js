@@ -1,4 +1,4 @@
-URL = 'https://api-storage-tiaw-exnr.vercel.app/';
+URL = 'https://api-storage-tiaw-exnr.vercel.app/corridas';
 
 function salvarCorridas() {
     const idUsuarioLogado = localStorage.getItem('idUsuarioLogado');
