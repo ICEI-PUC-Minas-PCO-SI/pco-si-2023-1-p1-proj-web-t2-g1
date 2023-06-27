@@ -2,7 +2,7 @@ const url = "http://localhost:3000/usuarios";
 
 const btnDelete = document.getElementById('btn-delete');
 btnDelete.addEventListener('click', () => {
-  const idUsuarioLogado = localStorage.getItem('idUsuarioLogado'); // Obtém o ID do usuário logado do localStorage da pag de login
+  const idUsuarioLogado = localStorage.getItem('idUsuarioLogado'); // recebe o id do local storage criado em login
 
   if (idUsuarioLogado) {
     fetch(`${url}/${idUsuarioLogado}`, {
@@ -11,7 +11,7 @@ btnDelete.addEventListener('click', () => {
       .then(() => {
         console.log(`Usuário com ID ${idUsuarioLogado} excluído com sucesso.`);
         alert('Usuário excluído com sucesso.');
-        location.reload(); // Recarrega a página após excluir o usuário
+        location.reload(); // f5 depois de excluir
       })
       .catch(error => {
         console.error('Erro ao excluir usuário:', error);
