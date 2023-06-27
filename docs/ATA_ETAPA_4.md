@@ -7,5 +7,5 @@ Realização da pagina de recuperação de senha
 # Bárbara
 Java Script da página de Login, fazendo a verificação do email e senha digitados. Salvamento dos dados da página de editar perfil e da página de cadastrar o veículo. Funcionamento inicial da página de Criar Corrida.
 
-#Arthur Parreiras
+# Arthur Parreiras
 Desenvolvimento das funcionalidades de exclusão de conta e avaliação de corrida em JavaScript, realizando a integração dessas funcionalidades com uma página HTML e um banco de dados JSON.
