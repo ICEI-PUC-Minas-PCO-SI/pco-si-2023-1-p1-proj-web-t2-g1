@@ -1,4 +1,4 @@
-const URL = 'http://localhost:3000/usuarios';
+const URL = 'https://api-storage-tiaw-exnr.vercel.app/usuarios';
 
 function realizarLogin() {
     const email = document.getElementById('email_input').value;

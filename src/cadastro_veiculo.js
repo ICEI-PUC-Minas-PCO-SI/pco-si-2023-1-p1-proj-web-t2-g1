@@ -1,4 +1,4 @@
-const URL = 'http://localhost:3000/usuarios';
+const URL = 'https://api-storage-tiaw-exnr.vercel.app/usuarios';
 
 function salvarAlteracoesVeiculo() {
   const idUsuarioLogado = localStorage.getItem('idUsuarioLogado'); // Obtém o ID do usuário logado do localStorage

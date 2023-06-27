@@ -1,4 +1,4 @@
-URL = 'http://localhost:3000/corridas';
+URL = 'https://api-storage-tiaw-exnr.vercel.app/corridas';
 
 window.onload = MostraCorridas;
 

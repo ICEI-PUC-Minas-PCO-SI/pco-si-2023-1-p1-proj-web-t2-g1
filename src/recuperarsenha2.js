@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/usuarios";
+const url = "https://api-storage-tiaw-exnr.vercel.app/usuarios";
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded event triggered.');
     

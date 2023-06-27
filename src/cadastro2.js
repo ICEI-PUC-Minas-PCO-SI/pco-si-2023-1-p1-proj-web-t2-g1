@@ -1,4 +1,4 @@
-const URL = 'http://localhost:3000/usuarios';
+const URL = 'https://api-storage-tiaw-exnr.vercel.app/usuarios';
 const botaoCadastro = document.getElementById('cadastrar');
 
 botaoCadastro.addEventListener('click', CadastraUsuario);
