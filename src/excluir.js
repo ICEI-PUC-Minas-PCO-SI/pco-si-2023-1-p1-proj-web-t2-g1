@@ -1,4 +1,4 @@
-const url = "https://api-storage-tiaw-exnr.vercel.app/usuarios";
+const url = "http://localhost:3000/usuarios";
 
 const btnDelete = document.getElementById('btn-delete');
 btnDelete.addEventListener('click', () => {

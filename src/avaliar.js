@@ -5,7 +5,7 @@ document.getElementById("avaliacaoForm").addEventListener("submit", function(eve
   var nota = document.getElementById("inputNota").value;
 
 
-  const URL = "https://api-storage-tiaw-exnr.vercel.app/corridas/" + idCorrida;
+  const URL = "http://localhost:3000/corridas/" + idCorrida;
 
   // faz a requisição
   var request = new Request(URL, {

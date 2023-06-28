@@ -1,4 +1,4 @@
-URL = 'https://api-storage-tiaw-exnr.vercel.app/corridas';
+URL = 'http://localhost:3000/corridas';
 
 window.onload = MostraHistorico;
 
