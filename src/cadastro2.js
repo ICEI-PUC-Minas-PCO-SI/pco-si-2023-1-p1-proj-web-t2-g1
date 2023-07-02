@@ -41,7 +41,7 @@ function CadastraUsuario() {
     .then(res => res.json())
     .then(() => location.reload());
 
-    window.open('login.html');
+    window.open('index.html');
 }
 
 function VerificaSenha () {
@@ -57,8 +57,10 @@ function VerificaSenha () {
 function VerificaEmail () {
     let email = document.getElementById('email').value;
 
-    if(!email.includes("@sga.pucminas.br")) {
+    if (!email.includes("@sga.pucminas.br") && !email.includes("@pucminas.br")) {
         alert('O email não está autorizado.');
         return false;
     }
+    
+    
 }

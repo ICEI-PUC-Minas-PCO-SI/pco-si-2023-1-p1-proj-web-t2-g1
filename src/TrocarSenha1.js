@@ -1,5 +1,5 @@
 
-const url = "http://localhost:3000/usuarios";
+const url = "https://api-storage-tiaw-exnr.vercel.app/usuarios";
 // Função para lidar com o clique no botão de prosseguir
 function recuperarSenha() {
     // Obter o valor do campo de e-mail
