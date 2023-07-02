@@ -11,7 +11,7 @@ btnDelete.addEventListener('click', () => {
       .then(() => {
         console.log(`Usuário com ID ${idUsuarioLogado} excluído com sucesso.`);
         alert('Usuário excluído com sucesso.');
-        location.reload(); // f5 depois de excluir
+        window.open('index.html');
       })
       .catch(error => {
         console.error('Erro ao excluir usuário:', error);
