@@ -1,11 +1,11 @@
 
 const URL = 'http://localhost:3000/usuarios';
 
-// FUNÇÃO PARA VERIFICAÇÃO DO EMAIL 
+// FUNÇÃO PARA VERIFICAÇÃO DO EMAIL E TELEFONE
 fetch(URL)
         .then(res => res.json())
         .then(usuarios => {
-            const usuarioEncontrado = usuarios.find(usuario => usuario.email === email);
+            const usuarioEncontrado = usuarios.find(usuario => usuario.email === email && usuario.telefone === telefone);
 
             if (usuarioEncontrado) {
 
@@ -26,16 +26,3 @@ function VerificaEmail () {
   }
 }
 }
-
-//FUNÇÃO PARA VERIFICAÇÃO DO TELEFONE
-fetch(URL)
-        .then(res => res.json())
-        .then(usuarios => {
-            const usuarioEncontrado = usuarios.find(usuario => usuario.telefone === telefone);
-
-            if (telefoneEncontrado) {
-
-            } else {
-                alert('Telefone inválido. Tente novamente.');
-            }
-        })
