@@ -1,35 +1,49 @@
-const url = "https://api-storage-tiaw-exnr.vercel.app/usuarios";
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded event triggered.');
-    
-    const form = document.querySelector('form');
-  
-    
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-  
-      
-      const senha = document.getElementById('senha').value;
-      const confirmaSenha = document.getElementById('confirma').value;
-  
-      
-      if (senha !== confirmaSenha) {
-        alert('As senhas não correspondem!');
-        return;
-      }
-  
-    
-      const usuario = {
-        id: 1,
-        senha: senha
-      };
-    
-      axios.put('http://localhost:3000/usuarios/' + usuario.id, usuario)
-        .then(function(response) {
-          console.log('Senha atualizada com sucesso!');
-        })
-        .catch(function(error) {
-          console.error('Erro ao atualizar a senha:', error);
-        });
-    });
-  });
+const URL = 'http://localhost:3000/usuarios';
+
+// Função para trocar a senha
+function trocarSenha() {
+  const novaSenha = document.getElementById('senha').value;
+
+  if (senha === confirma) {
+   
+   
+    const URL = 'http://localhost:3000/usuarios';
+    const usuarioID = 1; 
+    const dados = {
+      novasenha: senha
+    };
+
+   
+    fetch(`${URL}/${usuarioID}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dados)
+    })
+      .then(response => {
+        if (response.ok) {
+          
+          alert('Senha atualizada com sucesso!');
+         
+          window.location.href = 'pagina_de_sucesso.html';
+        } else {
+         
+          alert('Erro ao atualizar a senha. Por favor, tente novamente.');
+        }
+      })
+      .catch(error => {
+        console.error('Erro ao realizar a requisição:', error);
+      });
+  } else {
+
+    alert('A nova senha e a confirmação não coincidem. Por favor, verifique os campos.');
+  }
+}
+
+
+
+document.getElementById('btn_SalvarAlteracoes').addEventListener('click', function(event) {
+  event.preventDefault();
+  salvarAlteracoes();
+});
