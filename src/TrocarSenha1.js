@@ -1,36 +1,41 @@
 
-const url = "https://api-storage-tiaw-exnr.vercel.app/usuarios";
-// Função para lidar com o clique no botão de prosseguir
-function recuperarSenha() {
-    // Obter o valor do campo de e-mail
-    const email = document.getElementById('email1').value;
+const URL = 'http://localhost:3000/usuarios';
 
-    // Verificar se o e-mail foi preenchido
-    if (email === '') {
-      alert('Por favor, preencha o campo de e-mail.');
-      return;
-    }
+// FUNÇÃO PARA VERIFICAÇÃO DO EMAIL 
+fetch(URL)
+        .then(res => res.json())
+        .then(usuarios => {
+            const usuarioEncontrado = usuarios.find(usuario => usuario.email === email);
 
+            if (usuarioEncontrado) {
 
-    fetch('http://localhost:3000/usuarios', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email: email })
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('Um e-mail de recuperação de senha foi enviado para o endereço fornecido.');
-      } else {
-        alert('Ocorreu um erro ao processar a solicitação de recuperação de senha.');
-      }
-    })
-    .catch(error => {
-      console.error('Erro:', error);
-      alert('Ocorreu um erro ao processar a solicitação de recuperação de senha.');
-    });
+            } else {
+                alert('Email ou senha inválidos. Tente novamente, ou faça o cadastro');
+            }
+        })
+
+//FUNÇÃO PARA VERIFICAÇÃO DO EMAIL PUC MINAS
+
+function VerificaEmail () {
+  let email = document.getElementById('email').value;
+
+  if(!email.includes("@sga.pucminas.br")) {
+  if (!email.includes("@sga.pucminas.br") && !email.includes("@pucminas.br")) {
+      alert('O email não está autorizado.');
+      return false;
   }
+}
+}
 
-  // Adicionar um ouvinte de evento ao botão de prosseguir
-  document.querySelector('button').addEventListener('click', recuperarSenha);
+//FUNÇÃO PARA VERIFICAÇÃO DO TELEFONE
+fetch(URL)
+        .then(res => res.json())
+        .then(usuarios => {
+            const usuarioEncontrado = usuarios.find(usuario => usuario.telefone === telefone);
+
+            if (telefoneEncontrado) {
+
+            } else {
+                alert('Telefone inválido. Tente novamente.');
+            }
+        })
