@@ -1,11 +1,15 @@
 
 const URL = 'http://localhost:3000/usuarios';
 
-// FUNÇÃO PARA VERIFICAÇÃO DO EMAIL E TELEFONE
+function AUTENTICACAO() {
+  const email = document.getElementById('email_input').value;
+  const telefone = document.getElementById('telefone_input').value;
+
+// FUNÇÃO PARA VERIFICAÇÃO DO EMAIL 
 fetch(URL)
         .then(res => res.json())
         .then(usuarios => {
-            const usuarioEncontrado = usuarios.find(usuario => usuario.email === email && usuario.telefone === telefone);
+            const usuarioEncontrado = usuarios.find(usuario => usuario.email === email);
 
             if (usuarioEncontrado) {
 
@@ -26,3 +30,16 @@ function VerificaEmail () {
   }
 }
 }
+
+//FUNÇÃO PARA VERIFICAÇÃO DO TELEFONE
+fetch(URL)
+        .then(res => res.json())
+        .then(usuarios => {
+            const usuarioEncontrado = usuarios.find(usuario => usuario.telefone === telefone);
+
+            if (telefoneEncontrado) {
+
+            } else {
+                alert('Telefone inválido. Tente novamente.');
+            }
+        })
