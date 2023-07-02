@@ -26,7 +26,7 @@ function trocarSenha() {
           
           alert('Senha atualizada com sucesso!');
          
-          window.location.href = 'pagina_de_sucesso.html';
+          window.location.href ='index.html';
         } else {
          
           alert('Erro ao atualizar a senha. Por favor, tente novamente.');
