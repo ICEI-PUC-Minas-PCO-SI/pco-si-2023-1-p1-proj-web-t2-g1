@@ -172,7 +172,27 @@ function salvarCorridas() {
 
 document.getElementById('btn_SalvarCorrida').addEventListener('click', function(event) {
     event.preventDefault();
-    salvarCorridas();
+    const saidaCEP = document.getElementById('cep1').value;
+    const saidaNumero = document.getElementById('complemento1').value;
+
+    const destinoCEP = document.getElementById('cep2').value;
+    const destinoNumero = document.getElementById('complemento2').value;
+
+    const valor = document.getElementById('valor');
+    
+    console.log(typeof(valor)+ valor)
+
+    if (saidaCEP === "" || destinoCEP === "" || saidaNumero === "" || destinoNumero === "" || valor.value === "") {
+        alert("PREENCHA TODOS OS CAMPOS!");
+    } else if (saidaCEP === destinoCEP) {
+        alert("SAÍDA E DESTINO IGUAIS");
+    } else if (valor.value.length > 5) {
+        valor.style.border = "5px solid #f55";
+        valor.style.borderRadius = "10px";
+        alert("VALOR ALTO DEMAIS!")
+    } else {
+        salvarCorridas();
+    }
 
 //window.addEventListener('DOMContentLoaded', verificarUsuarioLogado);
 });
