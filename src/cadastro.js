@@ -58,27 +58,6 @@ function Cadastro(event) {
 document.getElementById ('cadastrar').addEventListener ('click', Cadastro);
 
 
-// Associar salvamento ao botao
-//document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin); 
-
-// Converta o objeto JSON para uma string
-   // var dadosCadastroString = JSON.stringify(dadosCadastro);
-
-    /*// Envio via AJAX usando a biblioteca axios:
-    axios.post('/salvar-cadastro', dadosCadastroString)
-        .then(function(response) {
-            console.log(response.data); // Resposta do servidor
-            // Realize ações adicionais após o cadastro ser salvo
-        })
-        .catch(function(error) {
-            console.error(error); // Tratamento de erro
-        });
-
-
-   // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
-   if (!usuarioCorrente.login) {
-    window.location.href = LOGIN_URL;
-}*/
 
 function exibeUsuarios() {
     
@@ -94,17 +73,3 @@ function exibeUsuarios() {
 
 }
 
-/*function initPage() {
-
-    // Associa a função de logout ao botão
-        document.getElementById('btn_logout').addEventListener('click', logoutUser);
-
-    // Informa o nome do usuário logado
-    document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
-
-    // Lista os usuários 
-    exibeUsuarios ();
-}
-
-// Associa ao evento de carga da página a função para verificar se o usuário está logado
-window.addEventListener('load', initPage);*/

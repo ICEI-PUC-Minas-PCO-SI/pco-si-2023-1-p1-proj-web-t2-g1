@@ -66,7 +66,21 @@ function verificarUsuarioLogado() {
 
 document.getElementById('btn_SalvarAlteracoes').addEventListener('click', function(event) {
     event.preventDefault();
-    salvarAlteracoes();
+    const telefone = document.getElementById('tel_input');
+
+    if (telefone.value === "") {
+        alert("Preencha o telefone");
+    } else if (isNaN(parseInt(telefone.value))) {
+        alert(`DIGITE APENAS NÚMEROS NO TELEFONE.
+        Siga o padrão: xx9yyyyyyyy
+        Sendo xx seu DDD e y seu número`)
+    } else if (telefone.value.length != 11 ) {
+        alert(`Telefone informado incorretamente.
+        Siga o padrão: xx9yyyyyyyy
+        Sendo xx seu DDD e y seu número`);
+    } else {
+        salvarAlteracoes();
+    }
 });
 
 window.addEventListener('DOMContentLoaded', verificarUsuarioLogado);
