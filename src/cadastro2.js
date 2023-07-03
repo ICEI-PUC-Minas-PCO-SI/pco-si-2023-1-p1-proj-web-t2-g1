@@ -56,6 +56,7 @@ function VerificaSenha () {
 
 function VerificaEmail () {
     let email = document.getElementById('email').value;
+    
 
     if (!email.includes("@sga.pucminas.br") && !email.includes("@pucminas.br")) {
         alert('O email não está autorizado. Só são permitidos os domínios "sga.pucminas.br" e "pucminas.br"');
@@ -64,3 +65,19 @@ function VerificaEmail () {
     
     
 }
+function ValidarNome(){
+    const nomeImput =document.getElementById('username');
+    const mensagemErro=document.getElementById('erro-nome');
+    const nome=nomeImput.value.trim();
+    if (nome.length>=6 && isNaN(nome)){
+        nomeImput.style.border='2px solid green';
+        mensagemErro.textContent='';
+        return true;
+    }else{
+        nomeImput.style.border='2px solid red';
+        mensagemErro.textContent='';
+        return false;
+    }
+
+}
+
