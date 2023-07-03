@@ -13,7 +13,7 @@ async function MostraCorridas () {
                 lista_corridas += `<div id="${corridas[i].id}" class="my-Box">
                 <div >
                     <a class="aceitar" href="#">Tenho Interesse</a>
-                    <a class="negar" href="#">Sem Interesse</a>
+                    <!--<a class="negar" href="#">Sem Interesse</a>-->
                 </div>
                 <p class="topo">R$ ${corridas[i].valor}</p>
                 <p class="local-partida">${corridas[i].saidaRua} - ${corridas[i].saidaBairro}</p>
