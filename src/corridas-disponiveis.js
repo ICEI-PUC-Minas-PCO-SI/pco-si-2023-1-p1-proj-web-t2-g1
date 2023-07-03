@@ -103,7 +103,7 @@ function GeraModal() {
 function AceitarCorrida () {
     const botaoAceitar = document.querySelectorAll(".aceitar");
     const idUsuarioLogado = localStorage.getItem('idUsuarioLogado')
-    let nomeUsuarioLogado = ""
+    let dadosUsuarioLogado = {};
 
     for(i = 0; i < botaoAceitar.length; i++) {
         botaoAceitar[i].addEventListener('click', async function() {
@@ -111,22 +111,27 @@ function AceitarCorrida () {
             await fetch(`http://localhost:3000/usuarios/${idUsuarioLogado}`)
                 .then(res => res.json())
                 .then(usuario => {
-                    nomeUsuarioLogado = usuario.nome;
+                    dadosUsuarioLogado = {
+                        nome: usuario.nome,
+                        telefone: usuario.telefone,
+                        vinculo: usuario.vinculo,
+                        sexo: usuario.genero
+                    };
                 });
 
             await fetch(`${URL}/${idCorrida}`)
                 .then(res => res.json())
                 .then(corrida => {
-                    EnviarWhatsApp(corrida, nomeUsuarioLogado);
+                    EnviarWhatsApp(corrida, dadosUsuarioLogado);
                 });
         })
     }
 }
 
-function EnviarWhatsApp (corrida, nomeUsuarioLogado) {
+function EnviarWhatsApp (corrida, dadosUsuarioLogado) {
     let divModalWpp = document.querySelector('#ModalWhatsApp');
 
-    let linkWpp = `https://wa.me/55${corrida.telefoneCriador}?text=Olá, *${corrida.nomeCriador}*! Tudo bem?%0A%0AMeu nome é ${nomeUsuarioLogado} e estou entrando em contato pois tenho interesse na carona oferecida por você no PUCarona, com saída na rua ${corrida.saidaRua} para o destino ${corrida.destinoRua}.%0A%0AQualquer dúvida estou a disposição!`
+    let linkWpp = `https://wa.me/55${corrida.telefoneCriador}?text=Olá, *${corrida.nomeCriador}*! Tudo bem?%0A%0AMeu nome é ${dadosUsuarioLogado.nome} e estou entrando em contato pois tenho interesse na carona oferecida por você no PUCarona, com saída na rua ${corrida.saidaRua} para o destino ${corrida.destinoRua}.%0A%0AQualquer dúvida estou a disposição!`
 
     let strModal = `<div id="fade" class="hide"></div>
     <div id="modalWpp" class="hide">
@@ -155,7 +160,33 @@ function EnviarWhatsApp (corrida, nomeUsuarioLogado) {
     closeModalButton.addEventListener("click", () => toggleModal());
     toggleModal();
     let botaoWhatsApp = document.querySelector('.botao-whatsapp');
-    botaoWhatsApp.addEventListener('click', function () {
+
+    botaoWhatsApp.addEventListener('click', async function () {
+        var request = new Request(`${URL}/${corrida.id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nomeInteressado: dadosUsuarioLogado.nome,
+                telefoneInteressado: dadosUsuarioLogado.telefone,
+                sexoInteressado: dadosUsuarioLogado.sexo,
+                vinculoInteressado: dadosUsuarioLogado.vinculo
+            })
+        });
+
+        await fetch(request)
+            .then(function(response) {
+                if (response.ok) {
+                    alert("Interesse registrado!");
+                } else {
+                    console.log("Erro ao tentar registra interesse.");
+                }
+                })
+                .catch(function(error) {
+                console.log("Erro na requisição:", error);
+                });
+                
         window.open(linkWpp);
     })
 }
