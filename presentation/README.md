@@ -14,7 +14,7 @@ Liste os arquivos produzidos e postados nesta pasta, com suas localizaçãoes e 
 ## Título do Projeto
 
 * PUCarona
-[LOGO](./logo-azul-claro.jpg)
+![LOGO](./logo-azul-claro.jpg)
 
 ## Identidade Visual (Marca, Design)
 
