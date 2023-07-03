@@ -9,7 +9,7 @@ O site em HTML/CSS/JS é um projeto dinamico, onde é necessario possuir node e 
 ### [0.1.0] - 02/04/2023
 #### Adicionado
 - Surgimento da ideia, levantamento dos problemas
-- ### [0.2.0] - 26/04/2023
+### [0.2.0] - 26/04/2023
 #### Adicionado
 - Criado o template
 - Levantamento dos requisitos e necessitadades
