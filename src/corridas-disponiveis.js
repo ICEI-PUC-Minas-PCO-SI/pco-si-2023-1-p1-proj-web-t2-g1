@@ -129,10 +129,10 @@ function EnviarWhatsApp (corrida, nomeUsuarioLogado) {
     let linkWpp = `https://wa.me/55${corrida.telefoneCriador}?text=Olá, *${corrida.nomeCriador}*! Tudo bem?%0A%0AMeu nome é ${nomeUsuarioLogado} e estou entrando em contato pois tenho interesse na carona oferecida por você no PUCarona, com saída na rua ${corrida.saidaRua} para o destino ${corrida.destinoRua}.%0A%0AQualquer dúvida estou a disposição!`
 
     let strModal = `<div id="fade" class="hide"></div>
-    <div id="modal" class="hide">
+    <div id="modalWpp" class="hide">
     <div class="modal-header">
         <h2>Entre em contato</h2>
-        <button id="close-modal">Fechar</button>
+        <button id="close-modal-wpp">Fechar</button>
     </div>
     <div class="modal-body">
         <div class="botao-whatsapp">
@@ -143,8 +143,8 @@ function EnviarWhatsApp (corrida, nomeUsuarioLogado) {
     </div>`;
     divModalWpp.innerHTML = strModal;
     
-    const closeModalButton = document.querySelector("#close-modal");
-    const modal = document.querySelector("#modal");
+    const closeModalButton = document.querySelector("#close-modal-wpp");
+    const modal = document.querySelector("#modalWpp");
     const fade = document.querySelector("#fade");
 
     const toggleModal = () => {

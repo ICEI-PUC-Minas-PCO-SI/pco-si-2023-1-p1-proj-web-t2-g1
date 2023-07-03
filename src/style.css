@@ -271,7 +271,7 @@ button {
     z-index: 5;
   }
   
-  #modal {
+  #modal, #modalWpp {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -285,7 +285,8 @@ button {
   }
   
   #fade,
-  #modal {
+  #modal,
+  #modalWpp {
     transition: 0.5s;
     opacity: 1;
     pointer-events: all;
@@ -305,12 +306,17 @@ button {
   }
   
   #modal.hide,
-  #fade.hide {
+  #fade.hide,
+  #modalWpp.hide {
     opacity: 0;
     pointer-events: none;
   }
   
   #modal.hide {
+    top: 0;
+  }
+
+  #modalWpp.hide {
     top: 0;
   }
 
