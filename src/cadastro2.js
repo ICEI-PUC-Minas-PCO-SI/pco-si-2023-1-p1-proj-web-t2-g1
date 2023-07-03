@@ -58,7 +58,7 @@ function VerificaEmail () {
     let email = document.getElementById('email').value;
 
     if (!email.includes("@sga.pucminas.br") && !email.includes("@pucminas.br")) {
-        alert('O email não está autorizado.');
+        alert('O email não está autorizado. Só são permitidos os domínios "sga.pucminas.br" e "pucminas.br"');
         return false;
     }
     

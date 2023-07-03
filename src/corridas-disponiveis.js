@@ -24,6 +24,7 @@ async function MostraCorridas () {
             divCorridas.innerHTML = lista_corridas;
     });
     GeraModal()
+    AceitarCorrida();
 }
 
 function GeraModal() {
@@ -99,4 +100,108 @@ function GeraModal() {
     }
 }
 
+function AceitarCorrida () {
+    const botaoAceitar = document.querySelectorAll(".aceitar");
+    const idUsuarioLogado = localStorage.getItem('idUsuarioLogado')
+    let nomeUsuarioLogado = ""
+
+    for(i = 0; i < botaoAceitar.length; i++) {
+        botaoAceitar[i].addEventListener('click', async function() {
+            let idCorrida = this.parentNode.parentNode.id;
+            await fetch(`http://localhost:3000/usuarios/${idUsuarioLogado}`)
+                .then(res => res.json())
+                .then(usuario => {
+                    nomeUsuarioLogado = usuario.nome;
+                });
+
+            await fetch(`${URL}/${idCorrida}`)
+                .then(res => res.json())
+                .then(corrida => {
+                    EnviarWhatsApp(corrida, nomeUsuarioLogado);
+                });
+        })
+    }
+}
+
+function EnviarWhatsApp (corrida, nomeUsuarioLogado) {
+    let divModalWpp = document.querySelector('#ModalWhatsApp');
+
+    let linkWpp = `https://wa.me/55${corrida.telefoneCriador}?text=Olá, *${corrida.nomeCriador}*! Tudo bem?%0A%0AMeu nome é ${nomeUsuarioLogado} e estou entrando em contato pois tenho interesse na carona oferecida por você no PUCarona, com saída na rua ${corrida.saidaRua} para o destino ${corrida.destinoRua}.%0A%0AQualquer dúvida estou a disposição!`
+
+    let strModal = `<div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+    <div class="modal-header">
+        <h2>Entre em contato</h2>
+        <button id="close-modal">Fechar</button>
+    </div>
+    <div class="modal-body">
+        <div class="botao-whatsapp">
+            <img src="images/logo-wpp.png" class="img-whatsapp">
+            <p>Enviar Mensagem</p>
+        </div>
+    </div>
+    </div>`;
+    divModalWpp.innerHTML = strModal;
+    
+    const closeModalButton = document.querySelector("#close-modal");
+    const modal = document.querySelector("#modal");
+    const fade = document.querySelector("#fade");
+
+    const toggleModal = () => {
+        modal.classList.toggle("hide");
+        fade.classList.toggle("hide");
+    };
+
+    closeModalButton.addEventListener("click", () => toggleModal());
+    toggleModal();
+    let botaoWhatsApp = document.querySelector('.botao-whatsapp');
+    botaoWhatsApp.addEventListener('click', function () {
+        window.open(linkWpp);
+    })
+}
+
+/* === NÃO FUNCIONA SEM BACK END ===
+
+function EnviarEmail(emailDestinatario, usuario) {
+    const nodemailer = require("nodemailer");
+
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        port: 465,
+        secure: true,
+        logger: true,
+        debug: true,
+        secureConnection: false,
+        auth: {
+            user: "pucarona.oficial@gmail.com",
+            pass: "tahllzciecrmgkcr" 
+        },
+        tls: {
+            rejectUnauthorized: true
+        }
+    });
+
+    transporter.sendMail({
+        from: "PUCarona <pucarona.oficial@gmail.com>",
+        to: `${emailDestinatario}`,
+        subject: "Um filho da Puc aceitou sua corrida!",
+        text: "Sua corrida foi aceita",
+        html: `<h1>Boas notícias! &#129395</h1>
+                <h4>${usuario.nome} aceitou sua corrida!</h4>
+                <p>Segue abaixo os dados do interessado &#128071</p>
+                <ul>
+                    <li>Nome: ${usuario.nome}</li>
+                    <li>Email: ${usuario.email}</li>
+                    <li>Telefone: ${usuario.telefone}</li>
+                    <li>Vínculo com a PUC Minas: ${usuario.vinculo}</li>
+                    <li>Gênero: ${usuario.genero}</li>
+                </ul>
+                `  
+    }).then(message => {
+        console.log(message);
+    }).catch(error => {
+        console.log(error)
+    })
+}
+*/
 
