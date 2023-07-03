@@ -24,3 +24,10 @@ function realizarVerificacao() {
             console.error('Erro ao carregar usuários:', error);
         });
 }
+
+
+// Função para salvar as alterações do usuário logado
+function salvarAlteracoes() {
+    const usuarioEncontrado = localStorage.getItem('idUsuarioLogado'); // Obtém o ID do usuário logado do localStorage
+}
+
