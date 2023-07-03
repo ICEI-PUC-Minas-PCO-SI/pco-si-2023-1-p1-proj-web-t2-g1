@@ -5,7 +5,14 @@ window.onload = MostraHistorico;
 async function MostraHistorico () {
     const divHistorico = document.querySelector(".my-Container")
     const idUsuarioLogado = localStorage.getItem('idUsuarioLogado');
-    console.log(idUsuarioLogado)
+    let nomeUsuarioLogado = "";
+    await fetch(`http://localhost:3000/usuarios/${idUsuarioLogado}`)
+            .then(res => res.json())
+            .then(usuario => {
+                nomeUsuarioLogado = usuario.nome;
+    });
+
+    console.log(nomeUsuarioLogado)
     
     await fetch(URL)
         .then(res => res.json())
@@ -20,6 +27,17 @@ async function MostraHistorico () {
                     <p class="local-destino">${corridas[i].destinoRua} - ${corridas[i].destinoBairro}</p>
                     <a class="botao" id="open-modal">Detalhes</a>
                 </div>`
+                }
+
+                if(corridas[i].nomeInteressado == nomeUsuarioLogado) {
+                    lista_corridas += `<div id="${corridas[i].id}" class="my-Box">
+                    <p class="passageiro topo">Passageiro</p>
+                    <p class="topo">R$ ${corridas[i].valor}</p>
+                    <p class="local-partida">${corridas[i].saidaRua} - ${corridas[i].saidaBairro}</p>
+                    <p class="local-destino">${corridas[i].destinoRua} - ${corridas[i].destinoBairro}</p>
+                    <a class="botao" id="open-modal">Detalhes</a>
+                </div>`;
+
                 }
             }
             divHistorico.innerHTML = lista_corridas;
