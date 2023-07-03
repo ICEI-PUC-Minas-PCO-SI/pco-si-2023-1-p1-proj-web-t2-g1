@@ -2,12 +2,13 @@ const URL = 'http://localhost:3000/usuarios';
 
 // Função para trocar a senha
 function trocarSenha() {
-  const novaSenha = document.getElementById('senha').value;
+  const senha1 = document.getElementById('senha1_input').value;
+  const senha2 = document.getElementById('senha2_input').value;
 
-  if (senha === confirma) {
+  if (senha1 === senha2) {
    
    
-    const URL = 'http://localhost:3000/usuarios';
+    
     const usuarioID = 1; 
     const dados = {
       novasenha: senha

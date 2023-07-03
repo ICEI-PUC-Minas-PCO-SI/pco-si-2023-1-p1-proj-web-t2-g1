@@ -11,6 +11,7 @@ function realizarVerificacao() {
 
             if (usuarioEncontrado) {
 
+                localStorage.setItem('idUsuarioLogado', usuarioEncontrado.id);
                 // Usuário válido, redirecionar para a página de sucesso ou executar alguma ação desejada
                 window.location.href = 'TrocarSenha2.html';
             } else {
