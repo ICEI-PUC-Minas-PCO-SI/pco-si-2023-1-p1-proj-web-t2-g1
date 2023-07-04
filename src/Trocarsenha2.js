@@ -41,7 +41,8 @@ function trocarSenha() {
       .then(response => {
         if (response.ok) {
           alert('Senha atualizada com sucesso!');
-          window.location.href = 'index.html';
+          
+          window.open('index.html');
         } else {
           alert('Erro ao atualizar a senha. Por favor, tente novamente.');
         }
