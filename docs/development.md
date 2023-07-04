@@ -4,7 +4,7 @@ Foram criadas ao todo 12 telas estaticas somente utilizando HTML, CSS e bibliote
 
 Sendo elas
 * Index 
- - Possui a opcao de fazer login, cadastro e trocar de senha
+- Possui a opcao de fazer login, cadastro e trocar de senha
 * Cadastro
  - Possui a opcao de criar a sua conta
 * Trocar De senha 1 e 2
